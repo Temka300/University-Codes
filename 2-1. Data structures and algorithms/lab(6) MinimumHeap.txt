@@ -1,0 +1,163 @@
+package lab6;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class MinimumHeap {
+    private Object[] tree;
+    private int size;
+
+    public MinimumHeap() {
+        tree = new Object[10]; // Initialize with an initial capacity
+        size = 0;
+    }
+
+    // ... (existing methods)
+
+    public void add(Object node) {
+        if (size == tree.length) {
+            // Resize the array if it's full
+            Object[] newTree = new Object[2 * tree.length];
+            System.arraycopy(tree, 0, newTree, 0, size);
+            tree = newTree;
+        }
+
+        // Add the new node to the end of the array
+        tree[size] = node;
+        size++;
+
+        // Heapify up to maintain the heap property
+        heapifyUp();
+    }
+
+    public Object remove() {
+        if (size == 0) {
+            System.out.println("Heap is empty. Cannot remove.");
+            return null;
+        }
+
+        Object minNode = tree[0];
+
+        // Replace the root with the last node
+        tree[0] = tree[size - 1];
+        size--;
+
+        // Heapify down to maintain the heap property
+        heapifyDown(0);
+
+        return minNode;
+    }
+
+    public void preOrder() {
+        preOrderTraversal(0);
+        System.out.println();
+    }
+
+    private void preOrderTraversal(int index) {
+        if (index >= size) {
+            return;
+        }
+
+        System.out.print(tree[index] + " ");
+        preOrderTraversal(2 * index + 1);
+        preOrderTraversal(2 * index + 2);
+    }
+
+    public void inOrder() {
+        inOrderTraversal(0);
+        System.out.println();
+    }
+
+    private void inOrderTraversal(int index) {
+        if (index >= size) {
+            return;
+        }
+
+        inOrderTraversal(2 * index + 1);
+        System.out.print(tree[index] + " ");
+        inOrderTraversal(2 * index + 2);
+    }
+
+    public void postOrder() {
+        postOrderTraversal(0);
+        System.out.println();
+    }
+
+    private void postOrderTraversal(int index) {
+        if (index >= size) {
+            return;
+        }
+
+        postOrderTraversal(2 * index + 1);
+        postOrderTraversal(2 * index + 2);
+        System.out.print(tree[index] + " ");
+    }
+
+    public void levelOrder() {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(0);
+
+        while (!queue.isEmpty()) {
+            int index = queue.poll();
+            System.out.print(tree[index] + " ");
+
+            int leftChild = 2 * index + 1;
+            int rightChild = 2 * index + 2;
+
+            if (leftChild < size) {
+                queue.offer(leftChild);
+            }
+
+            if (rightChild < size) {
+                queue.offer(rightChild);
+            }
+        }
+
+        System.out.println();
+    }
+
+    // Other methods
+
+    private void heapifyUp() {
+        int index = size - 1;
+
+        while (index > 0) {
+            int parent = (index - 1) / 2;
+
+            if (((Comparable) tree[index]).compareTo(tree[parent]) < 0) {
+                // Swap if the child is smaller than the parent
+                Object temp = tree[index];
+                tree[index] = tree[parent];
+                tree[parent] = temp;
+            } else {
+                break;
+            }
+
+            index = parent;
+        }
+    }
+
+    private void heapifyDown(int index) {
+        int leftChild = 2 * index + 1;
+        int rightChild = 2 * index + 2;
+        int smallest = index;
+
+        if (leftChild < size && ((Comparable) tree[leftChild]).compareTo(tree[smallest]) < 0) {
+            smallest = leftChild;
+        }
+
+        if (rightChild < size && ((Comparable) tree[rightChild]).compareTo(tree[smallest]) < 0) {
+            smallest = rightChild;
+        }
+
+        if (smallest != index) {
+            // Swap if the smallest is not the current node
+            Object temp = tree[index];
+            tree[index] = tree[smallest];
+            tree[smallest] = temp;
+
+            // Recursively heapify down
+            heapifyDown(smallest);
+        }
+    }
+}

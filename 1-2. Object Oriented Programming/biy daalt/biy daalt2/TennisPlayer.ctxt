@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TennisPlayer
+comment1.params=name\ age\ bodyWeight\ height\ clubName\ sportsmanshipDegree
+comment1.target=TennisPlayer(java.lang.String,\ int,\ double,\ double,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=void\ display()
+numComments=3

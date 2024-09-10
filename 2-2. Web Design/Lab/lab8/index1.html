@@ -1,0 +1,233 @@
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <title>Lab8.</title>
+          <script>
+              
+
+              function addNewCourse() {
+                  // Create a new row for course entry
+                  const newRow = document.createElement('tr');
+                  newRow.innerHTML = `
+                      <td>
+                          <select name="Khicheeliin_code">
+                            <option value="S.PSM201 - Magadlaliin onol ba mathematic statistic">S.PSM201 - Magadlaliin onol ba mathematic statistic</option>
+                            <option value="F.EEM200 - Tsahilgaan ba electron technikiin undes">F.EEM200 - Tsahilgaan ba electron technikiin undes</option>
+                            <option value="F.ITM202 - Web zohiomj">F.ITM202 - Web zohiomj</option>
+                            <option value="F.CSM101 - Programchlaliin undsen arguud">F.CSM101 - Programchlaliin undsen arguud</option>
+                            <option value="F.ITM207 - Khun ba computeriin hariltsaanii zohiomj">F.ITM207 - Khun ba computeriin hariltsaanii zohiomj</option>
+                          </select>
+                      </td>
+                      <td>
+                          <select name="Khicheeliin_credit">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                      </td>
+                      <td>
+                          <select name="Khicheeliin_code">
+                            <option value="Kh.Uugantuya">Kh.Uugantuya</option>
+                            <option value="P.Nyamsuren">P.Nyamsuren</option>
+                            <option value="U.Suck-Ochir">U.Suck-Ochir</option>
+                            <option value="A.Otgonbayar">A.Otgonbayar</option>
+                            <option value="G.Ganbat">G.Ganbat</option>
+                          </select>
+                      </td>
+                      <td>
+                          <select name="Lectsiin_tsag">
+                            <option value="I-1">I-1</option>
+                            <option value="I-2">I-2</option>
+                            <option value="I-3">I-3</option>
+                          </select>
+                      </td>
+                      <td>
+                          <select name="Seminariin tsag">
+                            <option value="II-1">II-1</option>
+                            <option value="II-2">II-2</option>
+                            <option value="II-3">II-3</option>
+                          </select>
+                      </td>
+                      <td>
+                          <select name="Laboratoriin tsag">
+                            <option value="III-1">III-1</option>
+                            <option value="III-2">III-2</option>
+                            <option value="III-3">III-3</option>
+                          </select>
+                      </td>
+                  `;
+                  document.getElementById('coursesTable').appendChild(newRow);
+              }
+
+              function generateCV(event) {
+              event.preventDefault(); // Prevent form submission
+              // Extracting personal information
+              const studentName = document.getElementById('studentname').value;
+              const fatherName = document.getElementById('fathername').value;
+              const motherName = document.getElementById('mothername').value;
+              const gender = document.querySelector('input[name="gender"]:checked').value;
+              const birthdate = document.getElementById('birthdate').value;
+              const email = document.getElementById('mail').value;
+              const mobile = document.getElementById('mobile').value;
+              const level = document.getElementById('level').value;
+              const state = document.getElementById('state').value;
+              const city = document.getElementById('city').value;
+              const zipcode = document.getElementById('zipcode').value;
+              const department = document.getElementById('department').value;
+
+              // Extract all courses
+              const courses = Array.from(document.querySelectorAll('#coursesTable tr')).map(tr => ({
+                  course: tr.children[0].querySelector('select').value,
+                  credit: tr.children[1].querySelector('select').value,
+                  instructor: tr.children[2].querySelector('select').value,
+                  lectureTime: tr.children[3].querySelector('select').value,
+                  seminarTime: tr.children[4].querySelector('select').value,
+                  labTime: tr.children[5].querySelector('select').value
+              }));
+              
+              // Generating CV Content
+              let cvContent = `<h2>Personal Information</h2>
+                  <p>Name: ${studentName}</p>
+                  <p>Father's Name: ${fatherName}</p>
+                  <p>Mother's Name: ${motherName}</p>
+                  <p>Gender: ${gender}</p>
+                  <p>Date of Birth: ${birthdate}</p>
+                  <p>Email: ${email}</p>
+                  <p>Mobile: ${mobile}</p>
+                  <p>Level: ${level}</p>
+                  <p>State: ${state}</p>
+                  <p>City: ${city}</p>
+                  <p>Zip Code: ${zipcode}</p>
+                  <p>Department: ${department}</p>
+                  <h2>Registered Courses</h2>`;
+              cvContent += courses.map(course => `
+                  <p>Course: ${course.course}, Credits: ${course.credit}, Instructor: ${course.instructor}, Lecture: ${course.lectureTime}, Seminar: ${course.seminarTime}, Lab: ${course.labTime}</p>
+              `).join('');
+
+              document.getElementById('cvDisplay').innerHTML = cvContent;
+          }
+          </script>
+      </head>
+      <body>
+        <form action="#" onsubmit="generateCV(event)">
+              <h1><center>Hicheel Burtgel</center></h1>
+              <table width="x" border="x1">
+                  <tr><td>Student's Photo</td></tr>
+                  <tr>
+                      <td rowspan="10"><input type="file" name="photo" id="photo"></td>
+                  </tr>
+                  <tr>
+                      <th colspan="2">Personal Information</th>
+                  </tr>
+                  <tr>
+                      <td><label for="studentname">Student Name:</label></td>
+                      <td><input type="" id="studentname" name="studentname" size="50" placeholder="Your Name"></td>
+                  </tr>
+                  <tr>
+                      <td><label for="fathername">Father's Name:</label></td>
+                      <td><input type="text" id="fathername" name="fathername" size="50" placeholder="Father's Full Name"></td>
+                  </tr>
+                  <tr>
+                      <td><label for="mothername">Mother's Name:</label></td>
+                      <td><input type="text" id="mothername" name="mothername" size="50" placeholder="Mother's Full Name"></td>
+                  </tr>
+                  <tr>
+                      <td><label for="gender">Gender:</label></td>
+                      <td>
+                          <label for="male">Male</label>
+                          <input type="radio" id="gender" value="male" name="gender">
+                          <label for="female">Female</label>
+                          <input type="radio" id="gender" value="female" name="gender">
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><label for="birthdate">Date of Birth:</label></td>
+                      <td><input type="date" id="birthdate" size="50" name="birthdate"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="mail">E-mail:</label></td>
+                      <td><input type="email" id="mail" name="mail" size="50" placeholder="email@xyz.com"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="level">Level:</label></td>
+                      <td>
+                        <select id="level" name="level">
+                          <option value="high School">High School</option>
+                          <option value="undergraduate">Undergraduate</option>
+                          <option value="graduate">Graduate</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="mobile">Tel/Mobile:</label></td>
+                      <td><input type="tel" id="mobile" name="mobile" size="50" maxlength="8" placeholder="XXXXXXXX" pattern="[0-9]{8}"></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4"></td>
+                      <th colspan="2">Address</th>
+                    </tr>
+                    <tr>
+                      <td><label for="state">State:</label></td>
+                      <td><input type="text" id="state" name="state" size="50" placeholder="State"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="city">City:</label></td>
+                      <td><input type="text" id="city" name="city" size="50" placeholder="City"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="zipcode">Zip Code:</label></td>
+                      <td><input type="number" id="zipcode" name="zipcode" size="5" placeholder="Zip Code"></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3"></td>
+                      <th colspan="2">School</th>
+                    </tr>
+                    <tr>
+                      <td><label for="department">Department:</label></td>
+                      <td>
+                          <select id="department" name="department">
+                              <option value="BAS">BAS</option>
+                              <option value="BUKHS">BUXS</option>
+                              <option value="UTS">UTS</option>
+                              <option value="GUUS">GUUS</option>
+                              <option value="MKHTS">MXTS</option>
+                              <option value="EKHS">EKHS</option>
+                              <option value="МТС">МТС</option>
+                              <option value="KHSHUS">KHSHUS</option>
+                            </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="grade">Grade Level</label></td>
+                      <td>
+                          <input type="checkbox" id="freshman" name="grade" value="freshman">
+                          <label for="freshman">Freshman</label>
+                          <input type="checkbox" id="sophomore" name="grade" value="sophomore">
+                          <label for="sophomore">Sophomore</label>
+                          <input type="checkbox" id="junior" name="grade" value="junior">
+                          <label for="junior">Junior</label>
+                          <input type="checkbox" id="senior" name="grade" value="senior">
+                          <label for="senior">Senior</label>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <th>Hicheeliin code - Ner</th>
+                      <th>Hicheliin credit</th>
+                      <th>Bagshiin ner - code</th>
+                      <th>Lektsiin tsag</th>
+                      <th>Seminariin tsag</th>
+                      <th>Laboratoriin tsag</th>
+                    </tr>
+                    <tr>
+                      <tbody id="coursesTable">
+                      </tbody>
+                    </tr>
+              </table>
+              <br>
+              <input type="button" value="Add New Course" onclick="addNewCourse()">
+          <input type="submit" value="Generate CV">
+            </form>   
+            <div id="cvDisplay"></div>
+      </body>
+  </html>

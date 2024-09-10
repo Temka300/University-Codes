@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 09:28:40 AM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAyLTAzOzA5OjQ1OjI4IFBNOzM0NzU="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE2OzExOjIxOjAxIFBNOzM7MzU2OA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDk6Mjg6NDAgQU07MTsyOTgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="too1, too2, x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="0"/>
+            <output expression="&quot;&#1059;&#1090;&#1075;&#1072;&#1072; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+            <input variable="too1"/>
+            <for variable="too2" start="1" end="too1" direction="inc" step="1">
+                <if expression="too1%too2=0">
+                    <then>
+                        <assign variable="x" expression="x+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="x=2">
+                <then>
+                    <output expression="&quot;prime number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;not prime number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Calculator
+comment1.params=
+comment1.target=void\ accept()
+comment2.params=x\ temp\ i\ j
+comment2.target=void\ fillArray(java.lang.String,\ java.lang.String,\ int,\ int)
+comment3.params=c\ a\ b
+comment3.target=double\ operator(char,\ double,\ double)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

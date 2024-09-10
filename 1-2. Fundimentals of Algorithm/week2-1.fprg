@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-07 05:05:23 PM"/>
+        <attribute name="created" value="REVMTDtHQU5BQTsyMDIzLTAyLTA3OzA0OjU5OjQxIFBNOzE5MTY="/>
+        <attribute name="edited" value="REVMTDtHQU5BQTsyMDIzLTAyLTA3OzA1OjA1OjIzIFBNOzM7MjAxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1044;&#1091;&#1088;&#1099;&#1085; 2 &#1073;&#1199;&#1093;&#1101;&#1083; &#1090;&#1086;&#1086;&#1085;&#1099; &#1080;&#1093; &#1073;&#1072; &#1073;&#1072;&#1075;&#1080;&#1081;&#1075; &#1085;&#1100; &#1086;&#1083;&#1078;, &#1093;&#1101;&#1074;&#1083;&#1101;."/>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;a=&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;b=&quot;" newline="True"/>
+            <input variable="b"/>
+            <if expression="a&gt;b">
+                <then>
+                    <output expression="&quot;max=&quot;&amp;a" newline="True"/>
+                    <output expression="&quot;min=&quot;&amp;b" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;max=&quot;&amp;b" newline="True"/>
+                    <output expression="&quot;min=&quot;&amp;a" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

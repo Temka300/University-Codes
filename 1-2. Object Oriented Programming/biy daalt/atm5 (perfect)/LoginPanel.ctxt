@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=LoginPanel
+comment1.params=
+comment1.target=LoginPanel()
+comment10.params=ID
+comment10.target=void\ setAccountNumber(java.lang.String)
+comment11.params=
+comment11.target=void\ setClear()
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=
+comment3.target=boolean\ getLogin()
+comment4.params=
+comment4.target=void\ setLoginFalse()
+comment5.params=
+comment5.target=boolean\ getRegister()
+comment6.params=
+comment6.target=void\ setRegisterFalse()
+comment7.params=
+comment7.target=java.lang.String\ getID()
+comment8.params=
+comment8.target=java.lang.String\ getPIN()
+comment9.params=
+comment9.target=void\ setIncorrect()
+numComments=12

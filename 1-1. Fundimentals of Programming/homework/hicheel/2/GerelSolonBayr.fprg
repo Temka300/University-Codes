@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-26 04:50:36 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KT1ROTFFTOzIwMjItMDktMjY7MDM6NTY6NTYgUE07MjkyOA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KT1ROTFFTOzIwMjItMDktMjY7MDQ6NTA6MzYgUE07MTszMDI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Gerelmaa, Solongo, Bayraa, Bugd" type="Integer" array="False" size=""/>
+            <output expression="&quot;Gerelmeegiin baitsai&quot;" newline="True"/>
+            <input variable="Gerelmaa"/>
+            <assign variable="Solongo" expression="Gerelmaa + 9"/>
+            <assign variable="Bayraa" expression="(Gerelmaa + Solongo) * 2"/>
+            <assign variable="Bugd" expression="Gerelmaa + Solongo + Bayraa"/>
+            <output expression="&quot;Solongo = &quot; &amp;Solongo" newline="True"/>
+            <output expression="&quot;Bayraa = &quot; &amp;Bayraa" newline="True"/>
+            <output expression="&quot;Bugd niitdee = &quot; &amp;Bugd" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=LoginFrame
+comment1.params=
+comment1.target=LoginFrame()
+comment2.params=str
+comment2.target=boolean\ isNumeric(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getID()
+comment4.params=
+comment4.target=java.lang.String\ getPIN()
+comment5.params=
+comment5.target=void\ setIncorrect()
+comment6.params=
+comment6.target=void\ setClear()
+comment7.params=ID
+comment7.target=void\ setAccountNumber(java.lang.String)
+numComments=8

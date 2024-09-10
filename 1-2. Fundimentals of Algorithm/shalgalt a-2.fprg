@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-23 11:05:49 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6NDQ6MjkgUE07Mjg5MA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTE6MDU6NDkgUE07MjsyOTk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1052;&#1072;&#1096;&#1080;&#1085;&#1099; &#1091;&#1088;&#1076; &#1076;&#1091;&#1075;&#1091;&#1081;&#1085;&#1099; &#1088;&#1077;&#1079;&#1080;&#1085; &#1085;&#1100; 24000 &#1082;&#1084;-&#1080;&#1081;&#1085; &#1076;&#1072;&#1088;&#1072;&#1072;, &#1093;&#1086;&#1081;&#1076; &#1076;&#1091;&#1075;&#1091;&#1081;&#1085;&#1099; &#1088;&#1077;&#1079;&#1080;&#1085; &#1085;&#1100; 36000 &#1082;&#1084;-&#1080;&#1081;&#1085; &#1076;&#1072;&#1088;&#1072;&#1072; &#1101;&#1083;&#1101;&#1075;&#1076;&#1101;&#1078;, &#1091;&#1088;&#1072;&#1075;&#1076;&#1076;&#1072;&#1075;. &#1059;&#1088;&#1076; &#1093;&#1086;&#1081;&#1076; &#1076;&#1091;&#1075;&#1091;&#1081;&#1085;&#1091;&#1091;&#1076;&#1099;&#1085; &#1073;&#1072;&#1081;&#1088;&#1099;&#1075; &#1089;&#1086;&#1083;&#1080;&#1074;&#1086;&#1083; &#1084;&#1072;&#1096;&#1080;&#1085;&#1099; &#1090;&#1091;&#1091;&#1083;&#1072;&#1093; &#1093;&#1072;&#1084;&#1075;&#1080;&#1081;&#1085; &#1091;&#1088;&#1090; &#1079;&#1072;&#1084; &#1085;&#1100; &#1093;&#1101;&#1076; &#1074;&#1101;?"/>
+            <declare name="frontTire, rearTire, tireSwaps, longestDistance" type="Integer" array="False" size=""/>
+            <assign variable="frontTire" expression="24000"/>
+            <assign variable="rearTire" expression="36000"/>
+            <assign variable="tireSwaps" expression="rearTire / frontTire"/>
+            <assign variable="longestDistance" expression="tireSwaps * frontTire"/>
+            <output expression="&quot;niitdee &quot;&amp;longestDistance" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

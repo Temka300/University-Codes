@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ClosePanel
+comment1.params=
+comment1.target=ClosePanel()
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=acct
+comment3.target=void\ addToAccountBox(java.lang.String)
+comment4.params=
+comment4.target=boolean\ getClose()
+comment5.params=
+comment5.target=void\ setCloseFalse()
+comment6.params=
+comment6.target=java.lang.String\ getCloseAccount()
+comment7.params=
+comment7.target=void\ setCloseClear()
+numComments=8

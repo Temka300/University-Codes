@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 08:49:59 AM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTAyOzEwOjQ4OjAzIEFNOzM0NDg="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTAyOzEwOjU1OjExIEFNOzE7MzU1Mw=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDg6NDk6NTkgQU07MjsyOTk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="7"/>
+            <declare name="i, max, min" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <assign variable="max" expression="a[0]"/>
+            <assign variable="min" expression="a[0]"/>
+            <for variable="i" start="1" end="6" direction="inc" step="1">
+                <if expression="a[i]&gt;max">
+                    <then>
+                        <assign variable="max" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="a[i]&lt;min">
+                    <then>
+                        <assign variable="min" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;max = &quot;&amp;max" newline="True"/>
+            <output expression="&quot;min = &quot;&amp;min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 10:43:20 AM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDk6NDQ6NDUgQU07Mjg3Nw=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MTA6NDM6MjAgQU07NDsyOTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, j, sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;n: &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="arr" type="Integer" array="True" size="n"/>
+            <output expression="n" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="sum" expression="0"/>
+                <for variable="j" start="1" end="arr[i]" direction="inc" step="1">
+                    <if expression="arr[i-1] % j == 0">
+                        <then>
+                            <assign variable="sum" expression="sum + j"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="sum == arr[i-1]">
+                    <then>
+                        <output expression="arr[i-1]" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

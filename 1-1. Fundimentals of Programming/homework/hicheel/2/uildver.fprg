@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-26 04:55:39 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KT1ROTFFTOzIwMjItMDktMjY7MDQ6NTA6MzkgUE07MjkyNA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KT1ROTFFTOzIwMjItMDktMjY7MDQ6NTU6MzkgUE07MTszMDM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ehniiodor, hoyrdohodor, ylgaa" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1198;&#1081;&#1083;&#1076;&#1074;&#1101;&#1088; &#1101;&#1093;&#1085;&#1080;&#1081; &#1257;&#1076;&#1257;&#1088; &#1093;&#1101;&#1076;&#1101;&#1085; &#1082;&#1075; &#1078;&#1080;&#1075;&#1085;&#1101;&#1084;&#1101;&#1075; &#1199;&#1081;&#1083;&#1076;&#1074;&#1101;&#1088;&#1083;&#1101;&#1089;&#1101;&#1085; &#1074;&#1101;?&quot;" newline="True"/>
+            <input variable="ehniiodor"/>
+            <assign variable="hoyrdohodor" expression="ehniiodor / 2"/>
+            <output expression="&quot;&#1061;&#1086;&#1105;&#1088;&#1076;&#1086;&#1093; &#1257;&#1076;&#1257;&#1088; = &quot; &amp;hoyrdohodor" newline="True"/>
+            <assign variable="ylgaa" expression="ehniiodor - hoyrdohodor"/>
+            <output expression="&quot;&#1069;&#1093;&#1085;&#1080;&#1081; &#1257;&#1076;&#1257;&#1088; &#1076;&#1072;&#1088;&#1072;&#1072;&#1075;&#1080;&#1081;&#1085; &#1257;&#1076;&#1088;&#1257;&#1257;&#1089; = &quot; &amp;ylgaa" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=question_view
+comment1.params=
+comment1.target=void\ loadMod()
+comment10.params=
+comment10.target=void\ askmode()
+comment11.params=board
+comment11.target=int\ wincheck(int[][])
+comment12.params=status
+comment12.target=void\ winloss(int)
+comment2.params=
+comment2.target=void\ loadval()
+comment3.params=
+comment3.target=void\ main()
+comment4.params=board\ board2\ og\ template\ message
+comment4.target=void\ paint(int[][],\ int[][],\ int[][],\ java.lang.String[][],\ java.lang.String)
+comment5.params=c
+comment5.target=java.lang.Boolean\ c_exist(int)
+comment6.params=a\ b
+comment6.target=void\ copy_arr(int[],\ int[])
+comment7.params=a\ b
+comment7.target=void\ copy_arr(int[][],\ int[][])
+comment8.params=board
+comment8.target=void\ lock_nos(int[][])
+comment9.params=arr\ no
+comment9.target=int[]\ add_arr(int[],\ int)
+numComments=13

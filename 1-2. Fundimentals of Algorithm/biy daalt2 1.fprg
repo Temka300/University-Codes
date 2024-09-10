@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-16 10:51:35 PM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE2OzEwOjM3OjMzIFBNOzM0Njk="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE2OzEwOjUxOjM1IFBNOzE7MzU3NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;A &#1090;&#1086;&#1086;&#1075; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;&#1042; &#1090;&#1086;&#1086;&#1075; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+            <input variable="b"/>
+            <if expression="a&lt;=b">
+                <then>
+                    <output expression="&quot;Max= &quot;&amp;b" newline="True"/>
+                    <output expression="&quot;Min= &quot;&amp;a" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Max= &quot;&amp;a" newline="True"/>
+                    <output expression="&quot;Min= &quot;&amp;b" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-09 05:06:41 PM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAyLTA5OzA4OjM1OjMyIEFNOzM0NTk="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTA5OzA1OjA2OjQxIFBNOzI7MzU3OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="st, st1, st2, st3, st4" type="String" array="False" size=""/>
+            <output expression="&quot;&#1089;&#1072;&#1081;&#1085; &#1091;&#1091;?&quot;" newline="True"/>
+            <input variable="st"/>
+            <output expression="&quot;&#1063;&#1072;&#1084;&#1072;&#1081;&#1075; &#1086;&#1074;&#1086;&#1075;&#1099;&#1075; &#1093;&#1101;&#1085; &#1075;&#1101;&#1076;&#1101;&#1075; &#1074;&#1101;?&quot;" newline="True"/>
+            <input variable="st1"/>
+            <output expression="&quot;&#1058;&#1072;&#1085;&#1099; &#1085;&#1101;&#1088;&#1080;&#1081;&#1075; &#1093;&#1101;&#1085; &#1075;&#1101;&#1076;&#1101;&#1075; &#1074;&#1101;?&quot;" newline="True"/>
+            <input variable="st2"/>
+            <output expression="&quot;&#1058;&#1072; &#1093;&#1101;&#1076;&#1101;&#1085; &#1085;&#1072;&#1089;&#1090;&#1072;&#1081; &#1074;&#1101;?&quot;" newline="True"/>
+            <input variable="st3"/>
+            <output expression="&quot;&#1058;&#1072; &#1093;&#1101;&#1076;&#1076;&#1199;&#1075;&#1101;&#1101;&#1088; &#1082;&#1091;&#1088;&#1089; &#1074;&#1101;?&quot;" newline="True"/>
+            <input variable="st4"/>
+            <output expression="&quot;&#1058;&#1072;&#1085;&#1076; &#1072;&#1084;&#1078;&#1080;&#1083;&#1090; &#1093;&#1199;&#1089;&#1100;&#1077;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=CloseFrame
+comment1.params=
+comment1.target=CloseFrame()
+comment2.params=acct
+comment2.target=void\ addToAccountBox(java.lang.String)
+comment3.params=
+comment3.target=boolean\ getClose()
+comment4.params=
+comment4.target=void\ setCloseFalse()
+comment5.params=
+comment5.target=java.lang.String\ getCloseAccount()
+comment6.params=
+comment6.target=void\ setCloseClear()
+numComments=7

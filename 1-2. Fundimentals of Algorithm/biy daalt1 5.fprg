@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 08:57:44 AM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTAxOzA4OjA5OjM4IFBNOzM0NzQ="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTAyOzA3OjUwOjE3IEFNOzE7MzU2MA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDg6NTc6NDQgQU07MTsyOTg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;a = &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;b = &quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="c" expression="a^b"/>
+            <output expression="&quot;hariu = &quot;&amp;c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

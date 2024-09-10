@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab4</title> 
+    </head>
+   
+        <body>
+            <table>
+                <tr>
+            <header align="center"><audio controls src="shuunaa.mp3" type="audio/mpeg"></audio><br>
+            </header>
+            </tr>
+            <tr>
+                <td>
+            <section>
+                <video width="500" height="240" controls>
+                <source src="movie.mp4.mp4" type="video/mp4"><br>
+            </video>
+            <canvas id="canvas" width="500" height="300" style="border:1px solid black"></canvas>
+        </section>
+                </td>
+                <td>
+            <aside><svg id="svg" width="300" height="500" style="border:1px solid black">
+        <rect x="0" y="0" width="300" height="350" fill="aqua"></rect> 
+        <rect x="0" y="300" width="300" height="250" fill="green"></rect> 
+        <circle r="40" cx="50" cy="50" stroke="orange" stroke-width="8" fill="yellow"></circle>
+        <rect x="90" y="200" width="200" height="200" fill="teal"></rect>
+        <polygon points="90, 200 290, 200 190, 100" fill="brown"></polygon>
+        <rect x=    "170" y="330" width="50" height="70" fill="black"></rect>
+        <rect x="120" y="250" width="50" height="50" fill="white"></rect>
+        <rect x="220" y="250" width="50" height="50" fill="white"></rect>
+        
+    </svg></aside></td></tr>
+    <tr>
+        <td>
+    <footer align="center">END</footer>
+    </td>
+    </tr>
+    </table>
+            <script type="text/javascript">
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = 'skyblue';
+    ctx.fillRect(0, 0, 500, 300 * 0.6);
+
+    ctx.beginPath();
+    ctx.arc(500 * 0.8, 300 * 0.2, 50, 0, Math.PI * 2);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.fillStyle = 'green';
+    ctx.fillRect(0, 300 * 0.6, 500, 300 * 0.4);
+
+
+        function drawStickFigure() {
+
+    ctx.beginPath();
+    ctx.arc(200, 50, 20, 0, Math.PI * 2); //x 200 y 50 tsntretei r 20 0 rad ehni utga
+    ctx.strokeStyle="black"
+    ctx.stroke();
+
+    ctx.moveTo(200, 70);
+    ctx.lineTo(200, 150);
+    ctx.strokeStyle="black"
+    ctx.stroke();
+
+    ctx.moveTo(200, 80);
+    ctx.lineTo(160, 120);
+    ctx.moveTo(200, 80);
+    ctx.lineTo(240, 120);
+    ctx.strokeStyle="black"
+    ctx.stroke();
+
+    ctx.moveTo(200, 150);
+    ctx.lineTo(160, 200);
+    ctx.moveTo(200, 150);
+    ctx.lineTo(240, 200);
+    ctx.strokeStyle="black"
+    ctx.stroke();
+  }
+  drawStickFigure();
+    </script>
+           
+        </body>
+</html>

@@ -1,0 +1,186 @@
+package lab5;
+
+import java.util.Scanner;
+import dataStructures.*; 
+
+public class MyHashTable  extends HashTable{
+	public MyHashTable(int divisor ) {//divisor = hash punktsiin niit urt
+		super(divisor);
+		//divisor hash punktsiin huvaagch 
+	}
+	/* Код: хэрвээ тухайн түлхүүртэй элемент олдвол утгыг оруулсан
+	элемэнтээр солих кодыг энд бич.*/
+	public Object updateElement(Object theKey, Object theElement)
+	 { 
+		Object updateElement = null;
+		int b = this.search(theKey);
+		if(this.table[b] != null) {
+			updateElement = this.put(theKey, theElement);
+			System.out.println(theKey+" түлхүүртэй " +updateElement+" элементийг " +theElement+ " элементээр солив." );
+		}
+		else 
+			System.out.println(theKey+" түлхүүртэй элемент олдсонгүй. ");
+		return updateElement;
+	 }
+	/* Код: хуучин түлхүүрийг шинэ түлхүүрээр солиж дахин байрлуулах кодыг
+	энд бичнэ*/
+	public Object updateKey(Object theKey, Object theNewKey)
+	 { 
+		Object element = null;
+		int b = this.search(theKey);
+		int b1 = this.search(theNewKey);
+		if(this.table[b] != null && this.table[b1] == null) {
+			element = this.table[b].getElement();
+			this.table[b] = null;
+			this.put(theNewKey, element);
+			System.out.println(theKey+ " түлхүүртэй" +element + " элементийг " +theNewKey+ " түлхүүртэй болгов.");
+		}
+		else
+			System.out.println(theNewKey+" түлхүүр тохирсонгүй.");
+		return element;
+	}
+	
+		
+	public void delete(Object theKey)
+	{ /* Код: хэрвээ тухайн түлхүүртэй элемент олдвол түлхүүр болон
+	элементийг устгах.*/
+		Object element = this.get(theKey);//dotood 
+		if(element != null) {
+			//search methodoor dugaariig ni gargaj avna 
+			int a = this.search(theKey);
+			this.table[a] = null;
+			this.size--;
+			System.out.println(theKey+" түлхүүртэй " +element+" элемент устгагдлаа. Элементийн тоо:" +this.size());
+		}
+		else
+			System.out.println(theKey+" түлхүүртэй элемент олдсонгүй.");
+	}
+	
+	public void menu() {
+		//tses vvsgesen
+		System.out.println("0.Хэвлэх");
+		System.out.println("1.Нэмэх");
+		System.out.println("2.Хайх");
+		System.out.println("3.Элемент шинэчлэх");
+		System.out.println("4.Түлхүүр шинэчлэх");
+		System.out.println("5.Устгах");
+		System.out.println("6.Гарах");
+		System.out.println("Та үйлдлийн дугаараа оруулна уу.");
+	}
+	public void ElementHaih() {
+		try {
+			Scanner scanner  = new Scanner(System.in);
+			Object key, element;
+			System.out.println("Хайх элементийн түлхүүр оруулна уу:");
+			key = scanner.nextLine();
+			element = this.get(key);
+			if(element != null) {
+				System.out.println(key+" түлхүүртэй " +element+ " элемент олдлоо.");
+			}
+			else 
+				System.out.println(key+ "түлхүүртэй элемент олдсонгүй.");
+		}
+		catch(Exception e) {
+			System.out.println("Элемент хайхад алдаа гарлаа." +e.getMessage());
+		}
+	}
+	//insert ni hash hvsnegrvv ogson tvlhvvrtei element nemeh
+	public void insert() {
+		try {
+			Scanner scanner  = new Scanner(System.in);
+			Object key, element;
+			System.out.println("Түлхүүрээ оруулна уу:");
+			key = scanner.nextLine();
+			System.out.println("Элементийг оруулна уу:");
+			element = scanner.nextLine();
+			this.put(key, element);//key element 2 oo put methodiig ashiglan hvsnegtrvvgee nemne
+			System.out.println("Элемент амжилттай нэмэгдлээ. Элементийн тоо:" +this.size());
+		}
+		catch(Exception e) {
+			System.out.println("Элемент хайхад алдаа гарлаа" +e.getMessage());
+		}
+	}
+	
+	public void ElementZasah() {
+		try {
+			Scanner scanner  = new Scanner(System.in);
+			Object key, element;
+			System.out.println("Засах элементийн түлхүүрээ оруулна уу:");
+			key = scanner.nextLine();
+			System.out.println("Засах элементийг оруулна уу");
+			element = scanner.nextLine();
+			this.updateElement(key, element);
+			
+		}
+		catch(Exception e) {
+			System.out.println("Элемент хайхад алдаа гарлаа" +e.getMessage());
+		}
+	}
+	public void KeyZasah() {
+		try {
+			Scanner scanner  = new Scanner(System.in);
+			Object key, newKey;
+			System.out.println("Хуучин түлхүүрээ оруулна уу:");
+			key = scanner.nextLine();
+			System.out.println("Шинэ түлхүүрээ оруулна уу:");
+			newKey = scanner.nextLine();
+			this.updateKey(key,newKey);
+			
+		}
+		catch(Exception e) {
+			System.out.println("Элемент хайхад алдаа гарлаа" +e.getMessage());
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		//divisor unshij avna
+		int divisor, songolt;
+		System.out.println("Хэш хүснэгтийн урт буюу divisor-ыг оруулна уу:");
+		Scanner scanner = new Scanner(System.in);
+		divisor = scanner.nextInt();
+		//hash tablee vvsgene
+		MyHashTable myhash = new MyHashTable(divisor);
+		while(true) {
+			myhash.menu();//tsesee hevlene commandaa oruulna 
+			songolt = scanner.nextInt();
+			switch(songolt) {
+			case 0:
+				myhash.output();//hash table dotor bgaa element hevleh
+				break;
+			case 1:
+				myhash.insert();
+				break;
+			case 2:
+				myhash.ElementHaih();
+				break;
+			case 3:
+				myhash.ElementZasah();
+				break;
+			case 4:
+				myhash.KeyZasah();
+				break;
+			case 5:
+				try {
+					Scanner scan = new Scanner(System.in);
+					Object key;
+					System.out.println("Устгах элементийг оруулна уу:");
+					key = scan.nextLine();
+					myhash.delete(key);
+				}
+				catch(Exception e) {
+					System.out.println("Элемент хайхад алдаа гарлаа." +e.getMessage());
+				}
+				break;
+			case 6:
+				System.out.println("Системээс амжилттай гарлаа.");
+				System.exit(0);
+				break;
+				default: 
+					System.out.println("Үйлдэл хийх утгаа зөв оруулна уу: 1-6");
+					break;
+			}
+		}
+	}
+
+}

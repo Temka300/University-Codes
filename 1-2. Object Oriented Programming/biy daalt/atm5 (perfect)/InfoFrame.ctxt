@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=InfoFrame
+comment1.params=
+comment1.target=InfoFrame()
+comment2.params=info
+comment2.target=void\ addToDisplay(java.lang.String)
+comment3.params=
+comment3.target=boolean\ getBack()
+comment4.params=
+comment4.target=void\ setBackFalse()
+comment5.params=
+comment5.target=void\ clearDisplay()
+numComments=6

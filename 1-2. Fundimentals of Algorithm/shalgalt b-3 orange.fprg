@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-23 10:09:35 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6MDI6MzAgUE07Mjg3Ng=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6MDk6MzUgUE07MjsyOTk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="5 &#1072;&#1083;&#1080;&#1084;&#1085;&#1099; &#1199;&#1085;&#1101; 3.25$ &#1086;&#1083;&#1085;&#1086;. &#1061;&#1101;&#1088;&#1101;&#1074; &#1085;&#1101;&#1075; &#1078;&#1199;&#1088;&#1078; &#1073;&#1072; &#1085;&#1101;&#1075; &#1096;&#1080;&#1088;&#1093;&#1101;&#1075; &#1072;&#1083;&#1080;&#1084;&#1085;&#1099; &#1199;&#1085;&#1101; &#1085;&#1080;&#1081;&#1083;&#1101;&#1101;&#1076; 1.05$ &#1073;&#1086;&#1083; &#1085;&#1101;&#1075; &#1096;&#1080;&#1088;&#1093;&#1101;&#1075; &#1078;&#1199;&#1088;&#1078;&#1080;&#1081;&#1085; &#1199;&#1085;&#1101; &#1093;&#1101;&#1076; &#1074;&#1101;?"/>
+            <declare name="apples, apple, orange, total" type="Real" array="False" size=""/>
+            <assign variable="apples" expression="3.25"/>
+            <assign variable="total" expression="1.05"/>
+            <assign variable="apple" expression="apples / 5"/>
+            <assign variable="orange" expression="total - apple"/>
+            <output expression="&quot;Price of one apple is: &quot;&amp;apple" newline="True"/>
+            <output expression="&quot;Price of one orange is: &quot;&amp;orange" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

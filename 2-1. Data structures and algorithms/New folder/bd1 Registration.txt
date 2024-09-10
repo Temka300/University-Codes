@@ -1,0 +1,212 @@
+package bd3;
+
+import java.io.FileNotFoundException;
+	import java.util.Scanner;
+	import java.io.*;
+	import dataStructures.*;
+	
+	public class Registration {
+		public ArrayLinearList studentList;
+		public ArrayLinearList subjectList;
+		public ArrayLinearList majorList;
+		
+		public Registration() {
+			studentList = new ArrayLinearList();
+			subjectList = new ArrayLinearList();
+			majorList = new ArrayLinearList();
+		}
+		public void readMajorList() {
+			try {
+				File file = new File("C:\\Users\\Temka\\Desktop\\Yumino\\Fun Project\\Eclipsee\\Ogogdol\\src\\bd3\\professions.txt");
+				Scanner sc = new Scanner(file);
+				int k = 0;
+				while(sc.hasNext()) {
+					Major mj = new Major(sc.nextLine());
+					majorList.add(k++, mj);
+				}
+			}
+			catch(FileNotFoundException ex) {
+				System.out.println("Error" + ex.getMessage());
+				System.exit(1);
+			}
+		}
+		public void readSubjectList() {
+			try {
+				File file = new File("C:\\Users\\Temka\\Desktop\\Yumino\\Fun Project\\Eclipsee\\Ogogdol\\src\\bd3\\subjects.txt");
+				Scanner sc = new Scanner(file);
+				int k = 0;
+				while(sc.hasNext()) {
+					Subject sj= new Subject(sc.nextLine());
+					subjectList.add(k++, sj);
+				}
+			}
+			catch(FileNotFoundException ex) {
+				System.out.println("Error" + ex.getMessage());
+				System.exit(1);
+			}
+		}
+		public void printSubjects() {
+			Subject.displayHead();
+			for(int i = 0; i < subjectList.size(); i++) {
+				((Subject)subjectList.get(i)).display();
+			}
+		}
+		public void printMajor() {
+			Major.displayHead();
+			for(int i = 0; i < majorList.size(); i++) {
+				((Major)majorList.get(i)).display();
+			}
+		}
+		public int checkStudent(String sc) {
+			int ind = -1;
+			for(int i = 0; i < this.studentList.size(); i++) {
+				if(((Student)this.studentList.get(i)).getCode().equals(sc)){
+					ind = i;
+				}
+			}
+			return ind;
+		}
+		public Major getMajor(String mc) {
+			Major mj = new Major();
+			Major mj1 = new Major();
+			for(int i = 0; i < majorList.size(); i++) {
+				mj1 = ((Major)majorList.get(i));
+				if(mj1.getCode().equals(mc)) {
+					mj = mj1;
+				}
+			}
+			return mj;
+		}
+		public int getSubject(String sc) {
+			int ind = -1;
+			for(int i = 0; i < subjectList.size(); i++) {
+				if(((Subject)subjectList.get(i)).getSubjectCode().equals(sc)) {
+					ind = i;
+				}
+			}
+			return ind;
+		}
+		
+		public void readStudentsList() {
+		    studentList = new ArrayLinearList();
+		    try {
+		    	File file = new File("C:\\Users\\Temka\\Desktop\\Yumino\\Fun Project\\Eclipsee\\Ogogdol\\src\\bd3\\exams.txt");
+		        Scanner sc = new Scanner(file);
+		        int k = 0;
+		        while (sc.hasNext()) {
+		            String ss = sc.nextLine();
+		            String[] strArr = ss.split("/");
+		            int studentIndex = checkStudent(strArr[1]);
+
+		            Major studentMajor = getMajor(strArr[0]);
+
+		            if (studentIndex == -1) {
+		                Student stdnt = new Student(strArr[1], studentMajor);
+
+		                int subjectIndex = getSubject(strArr[2]);
+		                if (subjectIndex != -1) {
+		                    stdnt.addLesson((Subject) subjectList.get(subjectIndex), Integer.parseInt(strArr[3]));
+		                } else {
+		                    System.out.println("Subject not found: " + strArr[2] + " for student " + strArr[1]);
+		                }
+
+		                studentList.add(k++, stdnt);
+		            } else {
+		                Student existingStudent = (Student) studentList.get(studentIndex);
+
+		                int subjectIndex = getSubject(strArr[2]);
+		                if (subjectIndex != -1) {
+		                    existingStudent.addLesson((Subject) subjectList.get(subjectIndex), Integer.parseInt(strArr[3]));
+		                } else {
+		                    System.out.println("Subject not found: " + strArr[2] + " for existing student " + strArr[1]);
+		                }
+		            }
+		        }
+		    } catch (FileNotFoundException ex) {
+		        System.out.println("Error:" + ex.getMessage());
+		        System.exit(1);
+		    }
+		}
+
+		public void displayStudentsGPA() {
+			Student.displayHeader();
+			for(int i = 0; i < studentList.size(); i++) {
+				((Student)studentList.get(i)).displayGPA();
+			}
+		}
+		
+		public void displayExpelledStudents() {
+	        System.out.println("**** Expelled Students ****");
+	        for (int i = 0; i < studentList.size(); i++) {
+	            Student student = (Student) studentList.get(i);
+	            int failCount = 0;
+	            for (int j = 0; j < student.getLessonCount(); j++) {
+	                Lesson lesson = student.getLesson(j);
+	                if (lesson.unelgeeOnoo() == 0.0f) {
+	                    failCount++;
+	                }
+	            }
+	            if (failCount > 3) {
+	                System.out.println("Student Code: " + student.getCode());
+	            }
+	        }
+	    }
+		
+		public void displayCourseGrades() {
+	        System.out.println("**** Grades for Each Course ****");
+	        for (int i = 0; i < subjectList.size(); i++) {
+	            Subject subject = (Subject) subjectList.get(i);
+	            System.out.println("Course: " + subject.getSubjectName() + " (" + subject.getSubjectCode() + ")");
+	            boolean courseHasStudents = false;
+	            for (int j = 0; j < studentList.size(); j++) {
+	                Student student = (Student) studentList.get(j);
+	                for (int k = 0; k < student.getLessonCount(); k++) {
+	                    Lesson lesson = student.getLesson(k);
+	                    if (lesson.learned.equals(subject)) {
+	                        courseHasStudents = true;
+	                        System.out.println("  Student Code: " + student.getCode() + " Grade: " + lesson.score);
+	                        break; 
+	                    }
+	                }
+	            }
+	            if (!courseHasStudents) {
+	                System.out.println("  No students took this course.");
+	            }
+	            System.out.println();
+	        }
+	    }
+		
+		public void displayMajorGrades() {
+	        System.out.println("**** Grades by Major ****");
+	        for (int i = 0; i < majorList.size(); i++) {
+	            Major major = (Major) majorList.get(i);
+	            System.out.println("Major: " + major.getName());
+	            boolean majorHasStudents = false;  // Flag to check if there are students in the major
+	            for (int j = 0; j < studentList.size(); j++) {
+	                Student student = (Student) studentList.get(j);
+	                if (student.getMajor().equals(major)) {
+	                    majorHasStudents = true;
+	                    System.out.println("  Student Code: " + student.getCode() + " GPA: " + student.getGPA());
+	                    student.displayGrades(); // Display grades for each course
+	                }
+	            }
+	            if (!majorHasStudents) {
+	                System.out.println("  No students in this major.");
+	            }
+	            System.out.println();
+	        }
+	    }
+		
+		public static void main(String [] args) {
+			Registration rr = new Registration();
+			rr.readSubjectList();
+			rr.printSubjects();
+			rr.readMajorList();
+			rr.printMajor();
+			rr.readStudentsList();
+			rr.displayStudentsGPA();
+			rr.displayExpelledStudents();
+			rr.displayCourseGrades();
+			rr.displayMajorGrades();
+		}
+	}

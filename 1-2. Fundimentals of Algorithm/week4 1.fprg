@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-26 05:43:58 AM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDMtMjY7MDI6MDc6MjIgQU07Mjg2OQ=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDMtMjY7MDU6NDM6NTggQU07MTsyOTg5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="names" type="String" array="True" size="5"/>
+            <declare name="heights" type="Real" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <input variable="names[i]"/>
+                <input variable="heights[i]"/>
+            </for>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <declare name="min" type="Integer" array="False" size=""/>
+                <assign variable="min" expression="i"/>
+                <for variable="j" start="i+1" end="5" direction="inc" step="1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

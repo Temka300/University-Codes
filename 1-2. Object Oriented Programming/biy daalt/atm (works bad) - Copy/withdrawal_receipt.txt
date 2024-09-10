@@ -1,0 +1,4 @@
+Withdrawal Receipt
+Amount: $255.0
+Date: Thu May 18 20:29:10 PDT 2023
+Current Balance: $745.0

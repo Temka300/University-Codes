@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sound, Video, SVG</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+            }
+            
+            header {
+                background-color: #f7a8b8;
+                flex: 1;
+            }
+            
+            .middle-section {
+                display: flex;
+                flex: 2;
+            }
+            
+            section.left-panel {
+                background-color: #c3a2d4;
+                flex: 3;
+            }
+            
+            section.right-panel {
+                background-color: #f9e79f;
+                flex: 2;
+            }
+            
+            footer {
+                background-color: #82e0aa;
+                flex: 1;
+            }
+
+            canvas {
+                display: block;
+                margin: 0 auto;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <p>1. Audio - Green and Blue</p>
+                <audio controls autoplay muted loop>
+                    <source src="Nogoon_tsneher.m4a">
+                </audio>
+            </header>
+            <div class="middle-section">
+                <section class="left-panel">
+                    <p>2. Video - Figurine</p>
+                    <a target="_blank" href="https://elearn.sict.edu.mn">
+                        <video width="250px" controls autoplay muted loop>
+                            <source src="video.webm" type="video/webm">
+                        </video>
+                    </a>
+
+                    <canvas id="myCanvas" width="400" height="200"></canvas>
+                    <script src="lab4.js"></script>
+                </section>
+
+                <section class="right-panel"></section>
+            </div>
+            <footer></footer>
+        </div>
+    </body>
+</html>

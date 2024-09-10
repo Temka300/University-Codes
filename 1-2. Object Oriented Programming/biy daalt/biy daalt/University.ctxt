@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=University
+comment1.params=schoolName
+comment1.target=University(java.lang.String)
+comment2.params=departmentName
+comment2.target=void\ createDepartment(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getSchoolName()
+comment4.params=
+comment4.target=void\ printUniversityInfo()
+numComments=5

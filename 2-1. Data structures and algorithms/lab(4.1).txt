@@ -1,0 +1,92 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class ASCIIToUnicodeConverter1 {
+
+    // Arrays to map ASCII codes to Unicode codes
+    private static final int[] ascii = {89, 168, 170, 184, 186, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215,
+            216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245,
+            246, 247, 248, 249, 250, 251, 252, 253, 254, 255};
+    private static final int[] uni = {1198, 1025, 1256, 1105, 1257, 1199, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057,
+            1058, 1059, 1060, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076, 1077, 1078, 1079, 1080, 1081,
+            1082, 1083, 1084, 1085, 1086, 1087, 1088, 1089, 1090, 1091, 1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100, 1101, 1102, 1103};
+
+    // Main method reads input file and calls translation method
+    public static void main(String[] args) {
+        try {
+            String filePath = "C:\\Users\\Temka\\Desktop\\Yumino\\Fun Project\\Eclipsee\\ascii.txt";
+
+            Scanner scanner = new Scanner(new File(filePath));
+
+            if (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                translateAndWrite(line);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Translates each word in a line and writes the result to an output file
+    private static void translateAndWrite(String line) {
+        StringBuilder result = new StringBuilder();
+
+        // Split the line into words and translate each word
+        for (String word : line.split("\\s+")) {
+            translateWord(word, result);
+            result.append(" "); // Add space between translated words
+        }
+
+        // Provide an absolute path for the output file
+        writeResultToFile(result.toString().trim(), "C:\\Users\\Temka\\Desktop\\Yumino\\Fun Project\\Eclipsee\\uni_result.txt");
+    }
+
+    // Translates each character in a word using ASCII to Unicode mapping
+    private static void translateWord(String word, StringBuilder result) {
+        for (char c : word.toCharArray()) {
+            int asciiCode = (int) c;
+            int position = binarySearch(asciiCode);
+
+            if (position != -1) {
+                char unicodeChar = (char) uni[position];
+                result.append(unicodeChar);
+            } else {
+                result.append(c); // Character not found in the array, keep it unchanged
+            }
+        }
+    }
+
+    // Binary search to find the position of an ASCII code in the array
+    private static int binarySearch(int key) {
+        int low = 0;
+        int high = ascii.length - 1;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            int midVal = ascii[mid];
+
+            if (midVal < key) {
+                low = mid + 1;
+            } else if (midVal > key) {
+                high = mid - 1;
+            } else {
+                return mid; // key found
+            }
+        }
+        return -1; // key not found
+    }
+
+    // Writes the result to an output file
+    private static void writeResultToFile(String result, String filename) {
+        try (FileWriter writer = new FileWriter(filename, true)) {
+            writer.write(result + "\n");
+            System.out.println("Result written to " + filename);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

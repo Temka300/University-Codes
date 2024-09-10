@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-23 10:12:22 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6MDk6NDMgUE07Mjg4Nw=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6MTI6MjIgUE07MTsyOTg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1057;&#1072;&#1085;&#1072;&#1089;&#1072;&#1085; &#1090;&#1086;&#1086;&#1085;&#1099; 1/3 &#1076;&#1101;&#1101;&#1088; &#1090;&#1199;&#1199;&#1085;&#1080;&#1081; 1/4 &#1093;&#1101;&#1089;&#1075;&#1080;&#1081;&#1075; &#1085;&#1101;&#1084;&#1073;&#1101;&#1083; 63 6&#1072;&#1088;&#1085;&#1072;. &#1057;&#1072;&#1085;&#1072;&#1089;&#1072;&#1085; &#1090;&#1086;&#1086;&#1075; &#1086;&#1083;."/>
+            <declare name="sum, expected, guessednumber" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="63.0"/>
+            <assign variable="expected" expression="0.0"/>
+            <assign variable="guessednumber" expression="0.0"/>
+            <assign variable="expected" expression="sum / (1.0 / 4.0 + 1.0 / 3.0)"/>
+            <assign variable="guessednumber" expression="expected"/>
+            <output expression="&quot;The guessed number is: &quot;&amp;guessednumber" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

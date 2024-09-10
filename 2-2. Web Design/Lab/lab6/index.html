@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 6</title>
+        <style>
+            .trunk {
+                fill: #8B4513;
+            }
+            .foliage {
+                fill: #228B22;
+            }
+
+            circle {
+                fill: #4b4b4b;
+                transform-box: fill-box;
+                transform-origin: center;
+                opacity: 0;
+            }
+
+            /* Smoke Animation */
+            @keyframes smokeL {
+                0%   { transform: scale(0.2) translate(0, 0) }
+                10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+                100% { opacity: 0; transform: scale(1) translate(-20px, -130px) }
+            }
+            @keyframes smokeR {
+                0%   { transform: scale(0.2) translate(0, 0) }
+                10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+                100% { opacity: 0; transform: scale(1) translate(20px, -130px) }
+            }
+
+            .smokeLeft {
+                animation: smokeL 10s 0s infinite;
+                fill: #4b4b4b;
+                transform-box: fill-box;
+                transform-origin: center;
+                opacity: 0;
+            }
+
+            .smokeRight {
+                animation: smokeR 10s 7s infinite;
+                fill: #4b4b4b;
+                transform-box: fill-box;
+                transform-origin: center;
+                opacity: 0;
+            }
+
+            @keyframes rotateMoon {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            
+            .moon {
+                fill: #f0f0f0;
+                opacity: 1;
+                clip-path: circle(90% at 100%);
+                animation: rotateMoon 10s infinite linear;
+                transform-box: fill-box;
+                transform-origin: center;
+            }
+
+            .star {
+                fill: white;
+                opacity: 1;
+            }
+
+            /* Grass Animation */    
+            @keyframes sway {
+                0%, 100% {
+                    transform: rotate(0deg) translateX(-0.1px);
+                }
+                50% {
+                    transform: rotate(0.5deg) translateX(0.1px);
+                }
+            }
+            .grass-blade {
+                fill: #042e04;
+                animation: sway 3s infinite;
+            }
+
+            @keyframes flow {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .description {
+                padding: 20px;
+                font-size: 16px;
+                color: white;
+                background: rgba(0, 0, 51, 0.8);
+                text-align: center;
+                animation: flow 10s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <svg width="800" height="600">
+            <!-- Night sky -->
+            <rect x="0" y="0" width="800" height="300" fill="#0B0033"></rect> <!-- Dark blue for night sky -->        
+
+            <circle cx="730" cy="50" r="50" class="moon"></circle>
+            <!-- Small rotating stars (circles) -->
+            <circle cx="50" cy="50" r="2" class="star"></circle>
+            <circle cx="100" cy="75" r="2" class="star"></circle>
+            <circle cx="150" cy="60" r="2" class="star"></circle>
+            <circle cx="200" cy="30" r="2" class="star"></circle>
+            <circle cx="250" cy="100" r="2" class="star"></circle>
+            <circle cx="300" cy="50" r="2" class="star"></circle>
+            <circle cx="350" cy="120" r="2" class="star"></circle>
+            <circle cx="400" cy="80" r="2" class="star"></circle>
+            <circle cx="450" cy="40" r="2" class="star"></circle>
+            <circle cx="500" cy="90" r="2" class="star"></circle>
+
+            
+            <!-- Mountain -->
+            <polygon points="300,300 500,300 400,100" fill="saddlebrown"></polygon> <!-- First Mountain -->
+            <polygon points="380,300 580,300 480,160" fill="saddlebrown"></polygon> <!-- Second Mountain -->
+            <polygon points="450,300 650,300 550,100" fill="saddlebrown"></polygon> <!-- Third Mountain -->
+            <polygon points="530,300 730,300 630,160" fill="saddlebrown"></polygon> <!-- Fourth Mountain -->
+            <polygon points="600,300 800,300 700,100" fill="saddlebrown"></polygon> <!-- Fifth Mountain -->
+
+            <!-- Grass -->
+            <rect x="0" y="300" width="800" height="300" fill="darkgreen"></rect>
+
+            <!-- Grass Blades -->
+            <rect x="190" y="560" width="2" height="20" class="grass-blade"></rect>
+            <rect x="410" y="370" width="2" height="20" class="grass-blade"></rect>
+            <rect x="280" y="370" width="2" height="15" class="grass-blade"></rect>
+            <rect x="370" y="430" width="2" height="15" class="grass-blade"></rect>
+            <rect x="490" y="390" width="2" height="15" class="grass-blade"></rect>
+            <rect x="710" y="470" width="2" height="15" class="grass-blade"></rect>
+            <rect x="580" y="530" width="2" height="15" class="grass-blade"></rect>
+            <rect x="490" y="540" width="2" height="15" class="grass-blade"></rect>
+            <rect x="490" y="530" width="2" height="15" class="grass-blade"></rect>
+            <rect x="490" y="480" width="2" height="15" class="grass-blade"></rect>
+            <rect x="670" y="390" width="2" height="15" class="grass-blade"></rect>
+            <rect x="810" y="330" width="2" height="15" class="grass-blade"></rect>
+            <rect x="830" y="310" width="2" height="15" class="grass-blade"></rect>
+
+            <!-- Smoke particle -->
+            <circle cx="297" cy="190" r="35" class="smokeLeft"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeRight"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeLeft"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeRight"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeLeft"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeRight"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeLeft"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeRight"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeLeft"></circle>
+            <circle cx="297" cy="190" r="35" class="smokeRight"></circle>
+            
+
+            <!-- House structure -->
+            <rect x="150" y="280" width="200" height="200" fill="gray"></rect> <!-- Main house body -->
+            <rect x="280" y="180" width="30" height="80" fill="brown"></rect> <!-- Chimney -->
+            <polygon points="150,280 250,180 350,280" fill="red"></polygon> <!-- Roof -->
+
+            <rect x="170" y="300" width="30" height="30" fill="white"></rect>  <!-- Window 1 -->
+            <rect x="240" y="300" width="30" height="30" fill="white"></rect>  <!-- Window 2 -->
+            <rect x="170" y="350" width="30" height="30" fill="white"></rect>  <!-- Window 3 -->
+            <rect x="240" y="350" width="30" height="30" fill="white"></rect>  <!-- Window 4 -->
+            <rect x="170" y="400" width="30" height="30" fill="white"></rect>  <!-- Window 5 -->
+            <rect x="240" y="400" width="30" height="30" fill="white"></rect>  <!-- Window 6 -->
+
+            <rect x="290" y="400" width="40" height="80" fill="brown"></rect> <!-- Door -->
+
+            <!-- Tree -->
+            <rect  x="600" y="450" width="20" height="100" class="trunk"></rect> 
+            <polygon  points="610,350 570,450 650,450" class="foliage"></polygon>
+            <polygon  points="610,400 560,500 660,500" class="foliage"></polygon>
+
+            <!-- Tree -->
+            <rect  x="600" y="450" width="20" height="100" class="trunk"></rect> 
+            <polygon  points="610,350 570,450 650,450" class="foliage"></polygon>
+            <polygon  points="610,400 560,500 660,500" class="foliage"></polygon>
+
+            
+
+        </svg>
+        <div class="description">
+            A serene night scene with twinkling stars rotating and fading in the sky, smoke rising gently from a chimney.
+        </div>
+    </body>
+</html>

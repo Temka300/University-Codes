@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="BUNDA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 08:51:57 AM"/>
+        <attribute name="created" value="QlVOREE7TEFQVE9QLTRWNFZWQTJKOzIwMjMtMDItMDc7MTA6MTA6NDIgQU07MjY3NQ=="/>
+        <attribute name="edited" value="QlVOREE7TEFQVE9QLTRWNFZWQTJKOzIwMjMtMDItMDc7MDU6MDY6MzIgUE07MjsyODA3"/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAyLTE2OzA4OjUyOjU0IEFNOzE7MzU2OA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDg6NTE6NTcgQU07MTsyOTg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="st, st1, st2, st3, st4" type="String" array="False" size=""/>
+            <declare name="a, b, c, d, e" type="String" array="False" size=""/>
+            <output expression="&quot;a undruu  bolon st neree  oruulna uu&quot;" newline="False"/>
+            <input variable="a"/>
+            <output expression="&quot;b undur  bolon st1 neree oruulna uu&quot;" newline="False"/>
+            <input variable="b"/>
+            <output expression="&quot;c undur  bolon st2 neree oruulna uu&quot;" newline="True"/>
+            <input variable="c"/>
+            <output expression="&quot;d undur  bolon st3 neree oruulna uu&quot;" newline="True"/>
+            <input variable="d"/>
+            <output expression="&quot;e undur  bolon st4 neree oruulna uu&quot;" newline="True"/>
+            <input variable="e"/>
+            <if expression="a==b&amp;&amp;b==c">
+                <then>
+                    <output expression="&quot;utgaa dahin oruulna uu&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="a&gt;b&amp;&amp;a&gt;c">
+                        <then>
+                            <output expression="&quot;hamgiin undur ni: &quot;&amp;a" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="a&lt;b&amp;&amp;a&lt;c">
+                                <then>
+                                    <output expression="&quot;hamgiin namhan ni: &quot;&amp;a" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="b==c &amp;&amp; c==d">
+                        <then>
+                            <output expression="&quot;dahin utgaa oruulna uu&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="b&gt;c&amp;&amp; b&gt;d">
+                                <then>
+                                    <output expression="&quot;hamgiin undur ni: &quot;&amp;b" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="b&lt;c &amp;&amp; b&lt;d">
+                                        <then>
+                                            <output expression="&quot;hamgiin namhan ni: &quot;&amp;b" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="c==d &amp;&amp; d==e">
+                        <then>
+                            <output expression="&quot;dahin utga oruulna uu&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="c&gt;d&amp;&amp;c&gt;e">
+                                <then>
+                                    <output expression="&quot;hamgiin undur ni: &quot;&amp;c" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="c&lt;d&amp;&amp;c&lt;e">
+                                        <then>
+                                            <output expression="&quot;hamgiin namhan ni: &quot;&amp;c" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="d==e &amp;&amp; e==a">
+                        <then>
+                            <output expression="&quot;dahin utga oruulna uu&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="d&gt;e&amp;&amp;d&gt;a">
+                                <then>
+                                    <output expression="&quot;hamgiin undur ni: &quot;&amp;d" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="d&lt;e&amp;&amp;d&lt;a">
+                                        <then>
+                                            <output expression="&quot;hamgiin namhan ni: &quot;&amp;d" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="e==a&amp;&amp;e==b">
+                        <then>
+                            <output expression="&quot;dahin utga oruulna&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="e&gt;a&amp;&amp;e&gt;b">
+                                <then>
+                                    <output expression="&quot;hamgiin undur ni: &quot;&amp;e" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="e&lt;a&amp;&amp;e&lt;b">
+                                        <then>
+                                            <output expression="&quot;hamgiin namhan: &quot;&amp;e" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

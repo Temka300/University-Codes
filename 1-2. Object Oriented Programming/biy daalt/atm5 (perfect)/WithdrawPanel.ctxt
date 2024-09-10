@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=WithdrawPanel
+comment1.params=
+comment1.target=WithdrawPanel()
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=acct
+comment3.target=void\ addToAccountBox(java.lang.String)
+comment4.params=
+comment4.target=boolean\ getWithdraw()
+comment5.params=
+comment5.target=void\ setWithdrawFalse()
+comment6.params=
+comment6.target=java.lang.String\ getSelectedAccount()
+comment7.params=
+comment7.target=java.lang.String\ getWithdrawAmount()
+comment8.params=
+comment8.target=void\ setWithdrawClear()
+numComments=9

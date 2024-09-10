@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 09:09:24 AM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAyLTE2OzA4OjI5OjU1IEFNOzM0NjU="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAyLTE2OzA4OjUwOjAwIEFNOzE7MzU1Nw=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDk6MDk6MjQgQU07MTsyOTgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Real" array="False" size=""/>
+            <declare name="x1, x2" type="Real" array="False" size=""/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <output expression="&quot;a = &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;b = &quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;c = &quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="d" expression="(b^2)-(4*a*c)"/>
+            <if expression="d&gt;=0">
+                <then>
+                    <assign variable="x1" expression="(b+(sqrt(d)))/2*a"/>
+                    <assign variable="x2" expression="(b-(sqrt(d)))/2*a"/>
+                    <output expression="&quot;x1=&quot;&amp;x1" newline="True"/>
+                    <output expression="&quot;x2=&quot;&amp;x2" newline="True"/>
+                </then>
+                <else>
+                    <if expression="d==0">
+                        <then>
+                            <assign variable="x1" expression="-b/(2*a)"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;shiidgui&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

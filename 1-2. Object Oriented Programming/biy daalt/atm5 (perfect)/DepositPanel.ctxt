@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=DepositPanel
+comment1.params=
+comment1.target=DepositPanel()
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=acct
+comment3.target=void\ addToAccountBox(java.lang.String)
+comment4.params=
+comment4.target=boolean\ getDeposit()
+comment5.params=
+comment5.target=void\ setDepositFalse()
+comment6.params=
+comment6.target=java.lang.String\ getSelectedAccount()
+comment7.params=
+comment7.target=java.lang.String\ getDepositAmount()
+comment8.params=
+comment8.target=void\ setDepositClear()
+numComments=9

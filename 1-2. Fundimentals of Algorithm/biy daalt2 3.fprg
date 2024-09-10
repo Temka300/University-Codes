@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-16 10:56:19 PM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE1OzEwOjQxOjE2IFBNOzM0NjQ="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE2OzEwOjU2OjE5IFBNOzQ7MzU4NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, sum, a" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1059;&#1090;&#1075;&#1072;&#1072; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="sum" expression="1"/>
+            <while expression="i&lt;n">
+                <assign variable="i" expression="i+1"/>
+                <assign variable="sum" expression="sum*i"/>
+                <output expression="i" newline="True"/>
+            </while>
+            <output expression="&quot;&#1060;&#1072;&#1082;&#1090;&#1088;&#1072;&#1083;= &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

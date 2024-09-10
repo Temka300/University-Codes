@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=AuthScreen
+comment1.params=authHandler\ db\ auth
+comment1.target=AuthScreen(java.util.function.BiConsumer,\ DB,\ Authenticator)
+comment2.params=e
+comment2.target=void\ componentShown(java.awt.event.ComponentEvent)
+numComments=3

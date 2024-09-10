@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CurrentAccount
+comment1.params=balance\ owner\ overdraftLimit
+comment1.target=CurrentAccount(double,\ User,\ double)
+comment2.params=
+comment2.target=double\ getOverdraftLimit()
+comment3.params=overdraftLimit
+comment3.target=void\ setOverdraftLimit(double)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

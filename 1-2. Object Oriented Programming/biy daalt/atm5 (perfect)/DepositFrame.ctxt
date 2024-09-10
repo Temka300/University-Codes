@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=DepositFrame
+comment1.params=
+comment1.target=DepositFrame()
+comment2.params=acct
+comment2.target=void\ addToAccountBox(java.lang.String)
+comment3.params=
+comment3.target=boolean\ getDeposit()
+comment4.params=
+comment4.target=void\ setDepositFalse()
+comment5.params=
+comment5.target=java.lang.String\ getSelectedAccount()
+comment6.params=
+comment6.target=java.lang.String\ getDepositAmount()
+comment7.params=
+comment7.target=void\ setDepositClear()
+numComments=8

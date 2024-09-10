@@ -1,0 +1,282 @@
+package BiyDaalt1;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class CarParkingApplication {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ParkingLot carPark = new ParkingLot();
+
+        System.out.println("Start creating a car park with parking spaces for staff and guests");
+        System.out.print("Enter the number of parking spaces for staff: ");
+        int staffSpaces = scanner.nextInt();
+        System.out.print("Enter the number of spaces for guests: ");
+        int guestSpaces = scanner.nextInt();
+
+        carPark.createParkingSpaces(staffSpaces, guestSpaces);
+
+        int option = 0;
+        while (option != 7) {
+            System.out.println("1: List all car slots");
+            System.out.println("2: Park your car");
+            System.out.println("3: Find a car");
+            System.out.println("4: Add a new parking lot");
+            System.out.println("5: Delete parking lot");
+            System.out.println("6: Take out the car");
+            System.out.println("7: Exit");
+            System.out.print("Select an option (1-7): ");
+            option = scanner.nextInt();
+
+            switch (option) {
+                case 1:
+                    carPark.listAllCarSlots();
+                    break;
+                case 2:
+                    carPark.parkCar();
+                    break;
+                case 3:
+                    carPark.findCar();
+                    break;
+                case 4:
+                    carPark.addParkingLot();
+                    break;
+                case 5:
+                    carPark.deleteParkingLot();
+                    break;
+                case 6:
+                    carPark.takeOutCar();
+                    break;
+                case 7:
+                    System.out.println("Exiting the program...");
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+                    break;
+            }
+        }
+    }
+}
+
+class ParkingLot {
+    private List<ParkingSpace> parkingSpaces;
+
+    public ParkingLot() {
+        parkingSpaces = new ArrayList<>();
+    }
+
+    public void createParkingSpaces(int staffSpaces, int guestSpaces) {
+        for (int i = 1; i <= staffSpaces; i++) {
+            parkingSpaces.add(new ParkingSpace("S" + String.format("%03d", i), true));
+        }
+
+        for (int i = 1; i <= guestSpaces; i++) {
+            parkingSpaces.add(new ParkingSpace("G" + String.format("%03d", i), false));
+        }
+
+        System.out.println("Successfully created " + staffSpaces + " staff parking spaces");
+        System.out.println("Successfully created " + guestSpaces + " guest parking spaces");
+    }
+
+    public void listAllCarSlots() {
+        for (ParkingSpace space : parkingSpaces) {
+            System.out.print("Slot ID: " + space.getSpaceID());
+            if (space.isOccupied()) {
+                System.out.print("; Car ID: " + space.getCar().getID());
+                System.out.print("; Owner: " + space.getCar().getOwner());
+                System.out.print("; Type: " + (space.isStaffSpace() ? "Staff" : "Guest"));
+            }
+            System.out.println();
+        }
+    }
+
+    public void parkCar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the parking space ID: ");
+        String spaceID = scanner.next();
+        System.out.print("Enter the car ID: ");
+        String carID = scanner.next();
+
+        // Check if the car is already parked
+        if (findSpaceByCarID(carID) != null) {
+            System.out.println("Car with ID " + carID + " is already parked. Cannot park in multiple spaces.");
+            return;
+        }
+
+        ParkingSpace space = findSpaceByID(spaceID);
+        if (space != null) {
+            if (!space.isOccupied()) {
+                System.out.print("Enter the car owner: ");
+                String owner = scanner.next();
+                boolean isStaffSpace = space.isStaffSpace();
+
+                // Declare isStaffCar here
+                boolean isStaffCar;
+
+                // Check if the parking space is for staff and the car is a staff car
+                if (isStaffSpace) {
+                    System.out.print("Is it a staff car? (true/false): ");
+                    isStaffCar = scanner.nextBoolean();
+                    if (!isStaffCar) {
+                        System.out.println("Staff car cannot be parked in this space.");
+                        return;
+                    }
+                } else {
+                    // If it's a guest space, the car must not be a staff car
+                    System.out.print("Is it a staff car? (true/false): ");
+                    isStaffCar = scanner.nextBoolean();
+                    if (isStaffCar) {
+                        System.out.println("Guest car cannot be parked in this space.");
+                        return;
+                    }
+                }
+
+                Car car = new Car(carID, owner, isStaffCar);
+                space.setCar(car);
+                System.out.println("Car parked successfully.");
+            } else {
+                System.out.println("Parking space is already occupied.");
+            }
+        } else {
+            System.out.println("Parking space not found.");
+        }
+    }
+
+
+
+    public void findCar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the car registration number: ");
+        String carID = scanner.next();
+
+        ParkingSpace space = findSpaceByCarID(carID);
+        if (space != null) {
+            System.out.println("Slot ID: " + space.getSpaceID() + "; Car ID: " + space.getCar().getID() +
+                    "; Owner: " + space.getCar().getOwner() + "; Type: " +
+                    (space.isStaffSpace() ? "Staff" : "Guests"));
+        } else {
+            System.out.println("Car not found.");
+        }
+    }
+
+    public void takeOutCar() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the car registration number: ");
+        String carID = scanner.next();
+
+        ParkingSpace space = findSpaceByCarID(carID);
+        if (space != null) {
+            space.setCar(null);
+            System.out.println("Car taken out successfully.");
+        } else {
+            System.out.println("Car not found.");
+        }
+    }
+
+    public void addParkingLot() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the parking space ID: ");
+        String spaceID = scanner.next();
+        System.out.print("Is it a staff space? (true/false): ");
+        boolean isStaffSpace = scanner.nextBoolean();
+
+        ParkingSpace space = new ParkingSpace(spaceID, isStaffSpace);
+        parkingSpaces.add(space);
+        System.out.println("Parking space added successfully.");
+    }
+
+    public void deleteParkingLot() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the parking space ID: ");
+        String spaceID = scanner.next();
+
+        ParkingSpace space = findSpaceByID(spaceID);
+        if (space != null) {
+            // Check if the parking space is occupied
+            if (space.isOccupied()) {
+                System.out.println("Cannot delete the parking lot. It is currently occupied.");
+            } else {
+                parkingSpaces.remove(space);
+                System.out.println("Parking space deleted successfully.");
+            }
+        } else {
+            System.out.println("Parking space not found.");
+        }
+    }
+
+
+    private ParkingSpace findSpaceByID(String spaceID) {
+        for (ParkingSpace space : parkingSpaces) {
+            if (space.getSpaceID().equals(spaceID)) {
+                return space;
+            }
+        }
+        return null;
+    }
+
+    private ParkingSpace findSpaceByCarID(String carID) {
+        for (ParkingSpace space : parkingSpaces) {
+            if (space.isOccupied() && space.getCar().getID().equals(carID)) {
+                return space;
+            }
+        }
+        return null;
+    }
+}
+
+class ParkingSpace {
+    private String spaceID;
+    private boolean isStaffSpace;
+    private Car car;
+
+    public ParkingSpace(String spaceID, boolean isStaffSpace) {
+        this.spaceID = spaceID;
+        this.isStaffSpace = isStaffSpace;
+        this.car = null;
+    }
+
+    public String getSpaceID() {
+        return spaceID;
+    }
+
+    public boolean isStaffSpace() {
+        return isStaffSpace;
+    }
+
+    public boolean isOccupied() {
+        return car != null;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+}
+
+class Car {
+    private String ID;
+    private String owner;
+    private boolean isStaff;
+
+    public Car(String ID, String owner, boolean isStaff) {
+        this.ID = ID;
+        this.owner = owner;
+        this.isStaff = isStaff;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public boolean isStaff() {
+        return isStaff;
+    }
+}

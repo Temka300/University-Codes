@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/icon.png">
+</head>
+<body>
+    <div class="neon-sign">
+        <h1>Batka's Shop</h1>
+    </div>
+
+    <div id="signInBorder" style="padding-bottom: 30px;">
+        <p id="SignInTxt">
+            Create Account
+        </p>
+        <form>
+            <label><strong>First Name</strong><br>
+                <input type="text" id="firstNameInput" name="firstName" required>
+            </label><br>
+            <label><strong>Last Name</strong><br>
+                <input type="text" id="lastNameInput" name="lastName" required>
+            </label><br>
+            <label><strong>Phone Number</strong><br>
+                <input type="tel" id="phoneInput" name="phone" required>
+            </label><br>
+            <label><strong>Email</strong><br>
+                <input type="email" id="emailInput" name="email" required>
+            </label><br>
+            <label><strong>Password</strong><br>
+                <input type="password" id="passwordInput" name="password" required>
+            </label><br>
+            <label><strong>Confirm Password</strong><br>
+                <input type="password" id="confirmPasswordInput" name="confirmPassword" required>
+            </label><br>
+            <button type="button" id="createAccountButton">Create Account</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('createAccountButton').onclick = function(e) {
+            e.preventDefault();
+            var password = document.getElementById('passwordInput').value;
+            var confirmPassword = document.getElementById('confirmPasswordInput').value;
+            if (password === confirmPassword) {
+                window.location.href = 'buying.html';
+            } else {
+                alert("Passwords do not match.");
+            }
+        };
+    </script>
+</body>
+</html>

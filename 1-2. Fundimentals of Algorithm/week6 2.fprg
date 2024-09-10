@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-15 06:23:44 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLUJEOUZRS0g7MjAyMy0wMy0xNTswNjoxOTo0NCBQTTsyNzQx"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLUJEOUZRS0g7MjAyMy0wMy0xNTswNjoyMzo0NCBQTTsxOzI4NDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2^n"/>
+            <declare name="n, i, s" type="Integer" array="False" size=""/>
+            <output expression="&quot;n=&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="s" expression="0"/>
+            <while expression="i&lt;=n">
+                <assign variable="s" expression="s+2"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="&quot;s=&quot;&amp;s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

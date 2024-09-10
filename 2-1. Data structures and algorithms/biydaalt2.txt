@@ -1,0 +1,154 @@
+package BiyDaalt2;
+
+import java.io.*;
+import java.util.Stack;
+
+class Path {
+    int x, y;
+
+    public Path(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+class Maze {
+    int[][] maze;
+    int width, height;
+    Path start, exit;
+    Stack<Path> pathStack;
+
+    public Maze() {
+        pathStack = new Stack<>();
+    }
+
+    // Read input from file
+    void input(String filename) {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(filename));
+            String line;
+
+            // Read dimensions
+            line = br.readLine();
+            if (line == null) {
+                System.err.println("Error: Empty file.");
+                return;
+            }
+            String[] dimensions = line.split(" ");
+            width = Integer.parseInt(dimensions[0]);
+            height = Integer.parseInt(dimensions[1]);
+
+            maze = new int[height][width];
+
+            // Read maze layout
+            for (int i = 0; i < height; i++) {
+                line = br.readLine();
+                if (line == null) {
+                    System.err.println("Error: Incomplete maze data.");
+                    return;
+                }
+
+                String[] row = line.split(" ");
+                for (int j = 0; j < width; j++) {
+                    maze[i][j] = Integer.parseInt(row[j]);
+                }
+            }
+
+            // Read starting position
+            line = br.readLine();
+            if (line == null) {
+                System.err.println("Error: Incomplete starting position data.");
+                return;
+            }
+            String[] startCoords = line.split(" ");
+            start = new Path(Integer.parseInt(startCoords[0]), Integer.parseInt(startCoords[1]));
+
+            // Read exit position
+            line = br.readLine();
+            if (line == null) {
+                System.err.println("Error: Incomplete exit position data.");
+                return;
+            }
+            String[] exitCoords = line.split(" ");
+            exit = new Path(Integer.parseInt(exitCoords[0]), Integer.parseInt(exitCoords[1]));
+
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Move through the maze
+    boolean move(Path current) {
+        pathStack.push(current);
+
+        while (!pathStack.isEmpty()) {
+            Path currentPath = pathStack.pop();
+            int x = currentPath.x;
+            int y = currentPath.y;
+
+            // Mark the current position as visited
+            maze[y][x] = 2; // Assuming '2' represents visited
+
+            // Check if the current position is the exit
+            if (x == exit.x && y == exit.y) {
+                return true; // Path found
+            }
+
+            // Check and move to the right
+            if (isValidMove(x + 1, y)) {
+                pathStack.push(new Path(x + 1, y));
+            }
+            // Check and move down
+            if (isValidMove(x, y + 1)) {
+                pathStack.push(new Path(x, y + 1));
+            }
+            // Check and move to the left
+            if (isValidMove(x - 1, y)) {
+                pathStack.push(new Path(x - 1, y));
+            }
+            // Check and move up
+            if (isValidMove(x, y - 1)) {
+                pathStack.push(new Path(x, y - 1));
+            }
+        }
+
+        return false; // No path found
+    }
+
+    // Helper method to check if the move is valid (within bounds and not a wall)
+    private boolean isValidMove(int x, int y) {
+        return x >= 0 && x < width && y >= 0 && y < height && maze[y][x] != 1 && maze[y][x] != 2;
+    }
+
+    // Write output to file
+    void output(String filename) {
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter(filename));
+
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
+                    bw.write(maze[i][j] + " ");
+                }
+                bw.newLine();
+            }
+
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+public class MazeSolver {
+    public static void main(String[] args) {
+        Maze mazeSolver = new Maze();
+
+        // Provide the full file path as an argument to the input method
+        mazeSolver.input("C:\\Users\\Temka\\Desktop\\Yumino\\Fun Project\\Eclipsee\\BiyDaalt2\\input.txt");
+
+        // Move through the maze and write output
+        mazeSolver.move(mazeSolver.start);
+        mazeSolver.output("output.txt");
+    }
+}

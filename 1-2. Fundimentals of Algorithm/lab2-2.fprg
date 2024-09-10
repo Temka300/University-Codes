@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-07 05:24:04 PM"/>
+        <attribute name="created" value="REVMTDtHQU5BQTsyMDIzLTAyLTA3OzA0OjU5OjQxIFBNOzE5MTY="/>
+        <attribute name="edited" value="REVMTDtHQU5BQTsyMDIzLTAyLTA3OzA1OjI0OjA0IFBNOzEwOzIwNjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1044;&#1091;&#1088;&#1099;&#1085; 3 &#1073;&#1199;&#1093;&#1101;&#1083; &#1090;&#1086;&#1086;&#1085;&#1099; &#1080;&#1093; &#1073;&#1072; &#1073;&#1072;&#1075;&#1080;&#1081;&#1075; &#1085;&#1100; &#1086;&#1083;&#1078;, &#1093;&#1101;&#1074;&#1083;&#1101;."/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;a=&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;b=&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;c=&quot;" newline="True"/>
+            <input variable="c"/>
+            <if expression="a&gt;b &amp;&amp; a&gt;c">
+                <then>
+                    <output expression="&quot;max=&quot;&amp;a" newline="True"/>
+                </then>
+                <else>
+                    <if expression="b&gt;c &amp;&amp; b&gt;a">
+                        <then>
+                            <output expression="&quot;max=&quot;&amp;b" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;max=&quot;&amp;c" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="a&lt;b &amp;&amp; a&lt;c">
+                <then>
+                    <output expression="&quot;min=&quot;&amp;a" newline="True"/>
+                </then>
+                <else>
+                    <if expression="b&lt;c &amp;&amp; b&lt;a">
+                        <then>
+                            <output expression="&quot;min=&quot;&amp;b" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;min=&quot;&amp;c" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="a==b || b==c || c==a">
+                <then>
+                    <output expression="&quot;&#1043;&#1091;&#1088;&#1074;&#1072;&#1085; &#1090;&#1086;&#1086; &#1090;&#1101;&#1085;&#1094;&#1199;&#1199; &#1073;&#1072;&#1081;&#1085;&#1072;. &#1048;&#1093; &#1073;&#1072; &#1073;&#1072;&#1075;&#1099;&#1075; &#1086;&#1083;&#1086;&#1093; &#1073;&#1086;&#1083;&#1086;&#1084;&#1078;&#1075;&#1199;&#1081;.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

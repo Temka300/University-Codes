@@ -1,0 +1,14 @@
+/* External CSS */
+header, footer, .main-content, aside {
+    display: flex;
+    justify-content: space-between;
+    /* Add more styling */
+}
+
+/* Flexbox styles */
+.main-content {
+    display: flex;
+    /* More flexbox styling */
+}
+
+/* Additional styles for layout */

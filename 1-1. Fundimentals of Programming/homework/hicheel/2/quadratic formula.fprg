@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-26 05:35:16 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KT1ROTFFTOzIwMjItMDktMjY7MDQ6NTU6NDEgUE07MjkyMg=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KT1ROTFFTOzIwMjItMDktMjY7MDU6MzU6MTYgUE07MTszMDMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1050;&#1074;&#1072;&#1076;&#1088;&#1072;&#1090; &#1090;&#1101;&#1075;&#1096;&#1080;&#1090;&#1075;&#1101;&#1083;&#1080;&#1081;&#1085; &#1090;&#1086;&#1086; &#1073;&#1080;&#1095;&#1085;&#1101; &#1199;&#1199;?&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <declare name="x1, x2, D" type="Real" array="False" size=""/>
+            <if expression="a = 0">
+                <then>
+                    <output expression="&quot;End&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="D" expression="b^2-4*a*c"/>
+                    <if expression="D &gt;= 0">
+                        <then>
+                            <assign variable="x1" expression="(-b + sqrt(D))/(2*a)"/>
+                            <assign variable="x2" expression="(-b - sqrt(D))/(2*a)"/>
+                            <output expression="&quot;x1=&quot;&amp;x1" newline="True"/>
+                            <output expression="&quot;x2=&quot;&amp;x2" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;&#1061;&#1072;&#1088;&#1080;&#1091;&#1083;&#1090; &#1073;&#1072;&#1081;&#1093;&#1075;&#1199;&#1081;&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

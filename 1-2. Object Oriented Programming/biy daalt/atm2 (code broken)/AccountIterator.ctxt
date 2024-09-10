@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=AccountIterator
+comment1.params=accounts2
+comment1.target=AccountIterator(java.util.ArrayList)
+comment2.params=position
+comment2.target=boolean\ hasNext(int)
+comment3.params=position
+comment3.target=java.lang.Object\ next(int)
+comment4.params=position
+comment4.target=boolean\ hasPrev(int)
+numComments=5

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=WithdrawFrame
+comment1.params=
+comment1.target=WithdrawFrame()
+comment2.params=acct
+comment2.target=void\ addToAccountBox(java.lang.String)
+comment3.params=
+comment3.target=boolean\ getWithdraw()
+comment4.params=
+comment4.target=void\ setWithdrawFalse()
+comment5.params=
+comment5.target=java.lang.String\ getSelectedAccount()
+comment6.params=
+comment6.target=java.lang.String\ getWithdrawAmount()
+comment7.params=
+comment7.target=void\ setWithdrawClear()
+numComments=8

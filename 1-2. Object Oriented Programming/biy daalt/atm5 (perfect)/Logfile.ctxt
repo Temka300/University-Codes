@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Logfile
+comment1.params=new_transaction_ID\ new_customer_ID\ new_account_number\ new_amount\ new_plus_neg
+comment1.target=Logfile(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ printTimeStampArray()
+comment3.params=
+comment3.target=java.lang.String\ getID()
+numComments=4

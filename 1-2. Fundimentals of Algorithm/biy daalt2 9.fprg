@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-19 10:00:03 PM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE3OzAzOjU5OjE5IFBNOzM0ODA="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE5OzEwOjAwOjAzIFBNOzI7MzU2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, sum, temp" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1059;&#1090;&#1075;&#1072;&#1072; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+            <input variable="x"/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="temp" expression="x"/>
+            <while expression="x&gt;0">
+                <assign variable="y" expression="x%10"/>
+                <assign variable="sum" expression="(sum*10)+y"/>
+                <assign variable="x" expression="x/10"/>
+            </while>
+            <if expression="temp==sum">
+                <then>
+                    <output expression="&quot;&#1055;&#1072;&#1083;&#1080;&#1084;&#1076;&#1088;&#1086;&#1084; &#1090;&#1086;&#1086; &#1084;&#1257;&#1085;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#1055;&#1072;&#1083;&#1080;&#1084;&#1076;&#1088;&#1086;&#1084; &#1090;&#1086;&#1086; &#1073;&#1080;&#1096;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

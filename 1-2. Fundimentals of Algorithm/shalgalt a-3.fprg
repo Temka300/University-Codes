@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-23 11:06:05 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6NTQ6NDcgUE07Mjg5MQ=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTE6MDY6MDUgUE07MjsyOTky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1061;&#1086;&#1105;&#1088; &#1089;&#1091;&#1091;&#1088;&#1080;&#1085;&#1075;&#1080;&#1081;&#1085; &#1093;&#1086;&#1086;&#1088;&#1086;&#1085;&#1076;&#1086;&#1093; &#1079;&#1072;&#1081; 180 &#1082;&#1084;. &#1069;&#1085;&#1101; &#1079;&#1072;&#1081;&#1075; 50 &#1082;&#1084;/&#1094;&#1072;&#1075; &#1093;&#1091;&#1088;&#1076;&#1090;&#1072;&#1081; &#1084;&#1072;&#1096;&#1080;&#1085; &#1093;&#1101;&#1076;&#1101;&#1085; &#1094;&#1072;&#1075;&#1090; &#1090;&#1091;&#1091;&#1083;&#1072;&#1093; &#1074;&#1101;?"/>
+            <declare name="distance, speed, time" type="Real" array="False" size=""/>
+            <assign variable="distance" expression="180"/>
+            <assign variable="speed" expression="50"/>
+            <assign variable="time" expression="distance / speed"/>
+            <output expression="&quot;The time taken to cover the distance: &quot;&amp;time&amp;&quot; hours&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

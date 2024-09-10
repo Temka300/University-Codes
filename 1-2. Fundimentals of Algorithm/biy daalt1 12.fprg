@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-15 11:11:37 PM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTA4OzEyOjExOjU1IFBNOzM0Njg="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE1OzExOjExOjM3IFBNOzQ7MzU3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, e, nas" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1093;&#1086;&#1085;&#1100;=1, &#1103;&#1084;&#1072;&#1072;=2, &#1090;&#1101;&#1084;&#1101;&#1101;=3, &#1199;&#1093;&#1101;&#1088;=4, &#1084;&#1086;&#1088;&#1100;=5&quot;" newline="True"/>
+            <input variable="a"/>
+            <if expression="1==a">
+                <then>
+                    <input variable="nas"/>
+                    <if expression="nas==1">
+                        <then>
+                            <output expression="&quot;hurga&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="nas==2">
+                                <then>
+                                    <output expression="&quot;tulug&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="nas==3">
+                                        <then>
+                                            <output expression="&quot;&#1096;&#1199;&#1076;&#1083;&#1101;&#1085; &#1093;&#1086;&#1085;&#1100;&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="nas==4">
+                                                <then>
+                                                    <output expression="&quot;&#1093;&#1103;&#1079;&#1072;&#1072;&#1083;&#1072;&#1085; &#1093;&#1086;&#1085;&#1100;&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="nas==5">
+                                                        <then>
+                                                            <output expression="&quot;&#1093;&#1086;&#1085;&#1100;&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;&#1085;&#1072;&#1089;&#1099;&#1075; &#1079;&#1257;&#1074; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="a==2">
+                        <then>
+                            <input variable="nas"/>
+                            <if expression="nas==1">
+                                <then>
+                                    <output expression="&quot;&#1080;&#1096;&#1080;&#1075;&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="nas==2">
+                                        <then>
+                                            <output expression="&quot;&#1041;&#1086;&#1088;&#1083;&#1086;&#1085;&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="nas==3">
+                                                <then>
+                                                    <output expression="&quot;&#1064;&#1199;&#1076;&#1083;&#1101;&#1085; &#1103;&#1084;&#1072;&#1072;&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="nas==4">
+                                                        <then>
+                                                            <output expression="&quot;&#1079;&#1091;&#1089;&#1072;&#1075;&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="nas==5">
+                                                                <then>
+                                                                    <output expression="&quot;&#1093;&#1103;&#1079;&#1072;&#1072;&#1083;&#1072;&#1085; &#1093;&#1086;&#1085;&#1100;&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;&#1085;&#1072;&#1089;&#1099;&#1075; &#1079;&#1257;&#1074; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="a==3">
+                                <then>
+                                    <input variable="nas"/>
+                                    <if expression="nas==1">
+                                        <then>
+                                            <output expression="&quot;&#1073;&#1086;&#1090;&#1075;&#1086;&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="nas==2">
+                                                <then>
+                                                    <output expression="&quot;&#1090;&#1086;&#1088;&#1086;&#1084;&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="nas==3">
+                                                        <then>
+                                                            <output expression="&quot;&#1058;&#1086;&#1081;&#1083;&#1086;&#1075;&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="nas==4">
+                                                                <then>
+                                                                    <output expression="&quot;&#1075;&#1091;&#1085;&#1072;&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="nas==5">
+                                                                        <then>
+                                                                            <output expression="&quot;&#1076;&#1257;&#1085;&#1257;&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;&#1085;&#1072;&#1089;&#1099;&#1075; &#1079;&#1257;&#1074; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="a==4">
+                                        <then>
+                                            <input variable="nas"/>
+                                            <if expression="nas==1">
+                                                <then>
+                                                    <output expression="&quot;&#1090;&#1091;&#1075;&#1072;&#1083;&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="nas==2">
+                                                        <then>
+                                                            <output expression="&quot;byruu&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="nas==3">
+                                                                <then>
+                                                                    <output expression="&quot;shudlen&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="nas==4">
+                                                                        <then>
+                                                                            <output expression="&quot;&#1075;&#1091;&#1085;&#1072;&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="nas==5">
+                                                                                <then>
+                                                                                    <output expression="&quot;&#1076;&#1257;&#1085;&#1257;&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="nas==6">
+                                                                                        <then>
+                                                                                            <output expression="&quot;&#1073;&#1199;&#1076;&#1199;&#1199;&#1085;&quot;" newline="True"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <output expression="&quot;&#1085;&#1072;&#1089;&#1099;&#1075; &#1079;&#1257;&#1074; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="a==5">
+                                                <then>
+                                                    <input variable="nas"/>
+                                                    <if expression="nas==1">
+                                                        <then>
+                                                            <output expression="&quot;unaga&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="nas==2">
+                                                                <then>
+                                                                    <output expression="&quot;daaga&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="nas==3">
+                                                                        <then>
+                                                                            <output expression="&quot;shudlen&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="nas==4">
+                                                                                <then>
+                                                                                    <output expression="&quot;soyolon&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="nas==5">
+                                                                                        <then>
+                                                                                            <output expression="&quot;&#1080;&#1093; &#1085;&#1072;&#1089;&quot;" newline="True"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <if expression="nas==6">
+                                                                                                <then>
+                                                                                                    <output expression="&quot;&#1072;&#1079;&#1072;&#1088;&#1075;&#1072;&quot;" newline="True"/>
+                                                                                                </then>
+                                                                                                <else>
+                                                                                                    <output expression="&quot;&#1085;&#1072;&#1089;&#1099;&#1075; &#1079;&#1257;&#1074; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+                                                                                                </else>
+                                                                                            </if>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;zuv utga oruulna uu&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

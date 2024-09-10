@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-02 08:31:00 AM"/>
+        <attribute name="created" value="TU87REVTS1RPUC01UTZOOVQyOzIwMjMtMDMtMDI7MDg6MTE6MTIgQU07MjQ1MA=="/>
+        <attribute name="edited" value="TU87REVTS1RPUC01UTZOOVQyOzIwMjMtMDMtMDI7MDg6MzE6MDAgQU07NTsyNTYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1041;&#1257;&#1093;&#1080;&#1081;&#1085; &#1090;&#1086;&#1086;:&quot;" newline="True"/>
+            <input variable="a"/>
+            <if expression="256&lt;=a &amp;&amp; a&lt;=1024">
+                <then>
+                    <if expression="a==1024">
+                        <then>
+                            <output expression="&quot;&#1053;&#1080;&#1081;&#1090; &#1076;&#1072;&#1074;&#1072;&#1072;&#1085;&#1099; &#1090;&#1086;&#1086; 10&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="a==512">
+                                <then>
+                                    <output expression="&quot;&#1053;&#1080;&#1081;&#1090; &#1076;&#1072;&#1074;&#1072;&#1072;&#1085;&#1099; &#1090;&#1086;&#1086; 9&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="a==256">
+                                        <then>
+                                            <output expression="&quot;&#1053;&#1080;&#1081;&#1090; &#1076;&#1072;&#1074;&#1072;&#1072;&#1085;&#1099; &#1090;&#1086;&#1086; 8&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;256-1024 &#1093;&#1086;&#1086;&#1088;&#1086;&#1085;&#1076; &#1091;&#1090;&#1075;&#1072; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;&#1061;&#1101;&#1076; &#1076;&#1072;&#1074;&#1089;&#1072;&#1085; &#1073;&#1101;? :&quot;" newline="True"/>
+            <input variable="b"/>
+            <if expression="1&lt;=b &amp;&amp; b&lt;=10">
+                <then>
+                    <if expression="b==10">
+                        <then>
+                            <output expression="&quot;&#1059;&#1083;&#1089;&#1099;&#1085; &#1072;&#1074;&#1072;&#1088;&#1075;&#1072;&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="b==9">
+                                <then>
+                                    <output expression="&quot;&#1059;&#1083;&#1089;&#1099;&#1085; &#1072;&#1088;&#1089;&#1083;&#1072;&#1085;&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="b==8">
+                                        <then>
+                                            <output expression="&quot;&#1059;&#1083;&#1089;&#1099;&#1085; &#1075;&#1072;&#1088;&#1100;&#1076;&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="b==7">
+                                                <then>
+                                                    <output expression="&quot;&#1059;&#1083;&#1089;&#1099;&#1085; &#1079;&#1072;&#1072;&#1085;&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="b==6">
+                                                        <then>
+                                                            <output expression="&quot;&#1059;&#1083;&#1089;&#1099;&#1085; &#1093;&#1072;&#1088;&#1094;&#1072;&#1075;&#1072;&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="b==5">
+                                                                <then>
+                                                                    <output expression="&quot;&#1059;&#1083;&#1089;&#1099;&#1085; &#1085;&#1072;&#1095;&#1080;&#1085;&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;&#1047;&#1072;&#1083;&#1091;&#1091; &#1073;&#1257;&#1093;&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;1-10 &#1093;&#1086;&#1086;&#1088;&#1086;&#1085;&#1076; &#1091;&#1090;&#1075;&#1072; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

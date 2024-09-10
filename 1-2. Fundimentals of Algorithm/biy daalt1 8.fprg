@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-04 12:02:45 PM"/>
+        <attribute name="created" value="QXN1cztERVNLVE9QLVY1NVUwR007MjAyMi0xMC0wNDsxMTo1Mzo0MCBBTTsyNzIy"/>
+        <attribute name="edited" value="QXN1cztERVNLVE9QLVY1NVUwR007MjAyMi0xMC0wNDsxMjowMjo0NSBQTTsxOzI4NDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Real" array="False" size=""/>
+            <output expression="&quot;gurvaljnii gurvan taliig oruul&quot;" newline="True"/>
+            <output expression="&quot;1&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;2&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;3&quot;" newline="True"/>
+            <input variable="c"/>
+            <if expression="a+b&gt;c&amp;&amp;a+c&gt;b&amp;&amp;c+b&gt;a">
+                <then>
+                    <output expression="&quot;gurvaljnii taluud mun baina&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;gurvaljnii taluud bish baina&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

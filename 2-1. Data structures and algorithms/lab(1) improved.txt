@@ -1,0 +1,162 @@
+package lab1;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class MyArrayLinearList {
+    private ArrayList<Integer> myList;
+
+    public MyArrayLinearList() {
+        myList = new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        MyArrayLinearList list = new MyArrayLinearList();
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\n------------------------");
+            System.out.println("1. Add Item");
+            System.out.println("2. Remove item");
+            System.out.println("3. Highest Item");
+            System.out.println("4. Lowest Item");
+            System.out.println("5. Sum");
+            System.out.println("6. Average");
+            System.out.println("7. Remove Odd Item");
+            System.out.println("8. Sort");
+            System.out.println("9. Quit");
+            System.out.println("10. See the List");
+            System.out.print("Enter your choice: ");
+
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter an item to add: ");
+                    int number = scanner.nextInt();
+                    list.addToList(number);
+                    break;
+                case 2:
+                    System.out.print("Enter an item to remove: ");
+                    int itemToRemove = scanner.nextInt();
+                    if (list.removeFromList(itemToRemove)) {
+                        System.out.println(itemToRemove + " got removed.");
+                    } else {
+                        System.out.println(itemToRemove + " is not in the list.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Highest item is: " + list.max());
+                    break;
+                case 4:
+                    System.out.println("Lowest item is: " + list.min());
+                    break;
+                case 5:
+                    System.out.println("Sum is: " + list.sum());
+                    break;
+                case 6:
+                    System.out.println("Average is: " + list.average());
+                    break;
+                case 7:
+                    list.removeOdd();
+                    System.out.println("Removed all odd items.");
+                    for (int element : list.getList()) {
+                        System.out.println(element);
+                    }
+                    break;
+                case 8:
+                    list.sortOriginal();
+                    System.out.println("Sorted.");
+                    for (int element : list.getList()) {
+                        System.out.println(element);
+                    }
+                    break;
+                case 9:
+                    System.out.println("Quit.");
+                    break;
+                case 10:
+                    if (list.myList.isEmpty()){
+                        System.out.println("The list is empty");
+                    } else {
+                        System.out.println("List: " + list.getList());
+                    }
+                    break;
+                default:
+                    System.out.println("Incorrect selection, please re-enter.");
+            }
+        } while (choice != 9);
+
+        scanner.close();
+    }
+
+    public void addToList(int number) {
+        myList.add(number);
+    }
+
+    public boolean removeFromList(int itemToRemove) {
+        return myList.remove(Integer.valueOf(itemToRemove));
+    }
+
+    public int max() {
+        if (myList.isEmpty()) {
+            throw new IllegalStateException("The list is empty");
+        }
+
+        int max = myList.get(0);
+        for (int i = 1; i < myList.size(); i++) {
+            if (myList.get(i) > max) {
+                max = myList.get(i);
+            }
+        }
+
+        return max;
+    }
+
+    public int min() {
+        if (myList.isEmpty()) {
+            throw new IllegalStateException("The list is empty");
+        }
+
+        int min = myList.get(0);
+        for (int i = 1; i < myList.size(); i++) {
+            if (myList.get(i) < min) {
+                min = myList.get(i);
+            }
+        }
+
+        return min;
+    }
+
+    public int sum() {
+        int sum = 0;
+        for (int element : myList) {
+            sum += element;
+        }
+        return sum;
+    }
+
+    public double average() {
+        if (myList.isEmpty()) {
+            throw new IllegalStateException("The list is empty");
+        }
+
+        int sum = sum();
+        return (double) sum / myList.size();
+    }
+
+    public void removeOdd() {
+        myList.removeIf(element -> element % 2 != 0);
+    }
+
+    public void sortOriginal() {
+        Collections.sort(myList);
+    }
+
+    public List<Integer> getList() {
+        return myList;
+    }
+}

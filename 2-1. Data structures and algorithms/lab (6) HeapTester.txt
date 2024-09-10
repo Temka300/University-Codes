@@ -1,0 +1,224 @@
+package lab6;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class HeapTester {
+    private Object[] tree;
+    private int size;
+
+    public HeapTester() {
+        tree = new Object[10]; // Initialize with an initial capacity
+        size = 0;
+    }
+
+    // ... (existing methods)
+
+    private void add(Object node) {
+        if (size == tree.length) {
+            // Resize the array if it's full
+            Object[] newTree = new Object[2 * tree.length];
+            System.arraycopy(tree, 0, newTree, 0, size);
+            tree = newTree;
+        }
+
+        // Add the new node to the end of the array
+        tree[size] = node;
+        size++;
+
+        // Heapify up to maintain the heap property
+        heapifyUp();
+    }
+
+    private Object remove() {
+        if (size == 0) {
+            System.out.println("Heap is empty. Cannot remove.");
+            return null;
+        }
+
+        Object minNode = tree[0];
+
+        // Replace the root with the last node
+        tree[0] = tree[size - 1];
+        size--;
+
+        // Heapify down to maintain the heap property
+        heapifyDown(0);
+
+        return minNode;
+    }
+
+    private void preOrder() {
+        preOrderTraversal(0);
+        System.out.println();
+    }
+
+    private void preOrderTraversal(int index) {
+        if (index >= size) {
+            return;
+        }
+
+        System.out.print(tree[index] + " ");
+        preOrderTraversal(2 * index + 1);
+        preOrderTraversal(2 * index + 2);
+    }
+
+    private void inOrder() {
+        inOrderTraversal(0);
+        System.out.println();
+    }
+
+    private void inOrderTraversal(int index) {
+        if (index >= size) {
+            return;
+        }
+
+        inOrderTraversal(2 * index + 1);
+        System.out.print(tree[index] + " ");
+        inOrderTraversal(2 * index + 2);
+    }
+
+    private void postOrder() {
+        postOrderTraversal(0);
+        System.out.println();
+    }
+
+    private void postOrderTraversal(int index) {
+        if (index >= size) {
+            return;
+        }
+
+        postOrderTraversal(2 * index + 1);
+        postOrderTraversal(2 * index + 2);
+        System.out.print(tree[index] + " ");
+    }
+
+    private void levelOrder() {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(0);
+
+        while (!queue.isEmpty()) {
+            int index = queue.poll();
+            System.out.print(tree[index] + " ");
+
+            int leftChild = 2 * index + 1;
+            int rightChild = 2 * index + 2;
+
+            if (leftChild < size) {
+                queue.offer(leftChild);
+            }
+
+            if (rightChild < size) {
+                queue.offer(rightChild);
+            }
+        }
+
+        System.out.println();
+    }
+
+    private void heapifyUp() {
+        int index = size - 1;
+
+        while (index > 0) {
+            int parent = (index - 1) / 2;
+
+            if (((Comparable) tree[index]).compareTo(tree[parent]) < 0) {
+                // Swap if the child is smaller than the parent
+                Object temp = tree[index];
+                tree[index] = tree[parent];
+                tree[parent] = temp;
+            } else {
+                break;
+            }
+
+            index = parent;
+        }
+    }
+
+    private void heapifyDown(int index) {
+        int leftChild = 2 * index + 1;
+        int rightChild = 2 * index + 2;
+        int smallest = index;
+
+        if (leftChild < size && ((Comparable) tree[leftChild]).compareTo(tree[smallest]) < 0) {
+            smallest = leftChild;
+        }
+
+        if (rightChild < size && ((Comparable) tree[rightChild]).compareTo(tree[smallest]) < 0) {
+            smallest = rightChild;
+        }
+
+        if (smallest != index) {
+            // Swap if the smallest is not the current node
+            Object temp = tree[index];
+            tree[index] = tree[smallest];
+            tree[smallest] = temp;
+
+            // Recursively heapify down
+            heapifyDown(smallest);
+        }
+    }
+
+    public static void main(String[] args) {
+        HeapTester heapTester = new HeapTester();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Choose an operation:");
+            System.out.println("1. Add a node");
+            System.out.println("2. Remove the minimum node");
+            System.out.println("3. Pre-order traversal");
+            System.out.println("4. In-order traversal");
+            System.out.println("5. Post-order traversal");
+            System.out.println("6. Level-order traversal");
+            System.out.println("0. Exit");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter the value of the node to add:");
+                    int valueToAdd = scanner.nextInt();
+                    heapTester.add(valueToAdd);
+                    break;
+
+                case 2:
+                    Object removedNode = heapTester.remove();
+                    if (removedNode != null) {
+                        System.out.println("Removed node: " + removedNode);
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Pre-order traversal:");
+                    heapTester.preOrder();
+                    break;
+
+                case 4:
+                    System.out.println("In-order traversal:");
+                    heapTester.inOrder();
+                    break;
+
+                case 5:
+                    System.out.println("Post-order traversal:");
+                    heapTester.postOrder();
+                    break;
+
+                case 6:
+                    System.out.println("Level-order traversal:");
+                    heapTester.levelOrder();
+                    break;
+
+                case 0:
+                    System.out.println("Exiting program.");
+                    scanner.close();
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid choice. Try again.");
+                    break;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Generator
+comment1.params=no
+comment1.target=int[][]\ generate(int)
+comment2.params=a\ no
+comment2.target=void\ addval(int[][],\ int)
+comment3.params=a\ b
+comment3.target=void\ copy_arr(int[][],\ int[][])
+numComments=4

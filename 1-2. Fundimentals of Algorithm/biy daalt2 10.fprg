@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 09:44:19 AM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE3OzAzOjU5OjE5IFBNOzM0ODA="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE5OzEwOjAwOjAzIFBNOzI7MzU2OA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDk6NDQ6MTkgQU07MTsyOTg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;n = &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Prime&quot;" newline="True"/>
+            <for variable="i" start="2" end="n" direction="inc" step="1">
+                <declare name="isPrime" type="Boolean" array="False" size=""/>
+                <assign variable="isPrime" expression="true"/>
+                <declare name="j" type="Integer" array="False" size=""/>
+                <for variable="j" start="2" end="sqrt(i)" direction="inc" step="1">
+                    <if expression="i % j == 0">
+                        <then>
+                            <assign variable="isPrime" expression="false"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="isPrime">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Togs&quot;" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <declare name="sum" type="Integer" array="False" size=""/>
+                <assign variable="sum" expression="0"/>
+                <declare name="j" type="Integer" array="False" size=""/>
+                <for variable="j" start="1" end="i / 2" direction="inc" step="1">
+                    <if expression="i % j == 0">
+                        <then>
+                            <assign variable="sum" expression="sum + j"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="sum == i">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Palindrome&quot;" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <declare name="num, rev" type="Integer" array="False" size=""/>
+                <assign variable="num" expression="i"/>
+                <assign variable="rev" expression="0"/>
+                <while expression="num &gt; 0">
+                    <assign variable="rev" expression="rev * 10 + num % 10"/>
+                    <assign variable="num" expression="num / 10"/>
+                </while>
+                <if expression="i == rev">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

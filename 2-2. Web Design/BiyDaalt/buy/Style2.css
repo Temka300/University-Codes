@@ -1,0 +1,50 @@
+body{
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+}
+#cart{
+    margin-top: 5px;
+}
+header{
+    background-color: black;
+    display: flex;
+    margin: -10px;
+    width: 105%;
+    height: 80px;
+    overflow: scroll;
+    
+    
+}
+a:hover{
+    border: 1px solid #f2f2f2;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+
+}
+a:visited{
+   color: white;
+    text-decoration: none;
+}
+#logo{
+    margin:5px;
+    margin-left: 20px;
+}
+#search{
+    margin-top: 20px;
+    left:-4px;
+    background-color: #ff9900;
+    height: 31px;
+    padding-bottom: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+#searchBar{
+    margin-left: 10%;
+    margin-top: 20px;
+    width: 50%;
+    min-width: 200px;
+    height: 40px;
+}

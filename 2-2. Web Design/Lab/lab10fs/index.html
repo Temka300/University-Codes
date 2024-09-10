@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Shooter Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            /* background-color: #f0f0f0; */
+            background-color: #000000;
+        }
+        canvas {
+            background-color: #251d1d;
+            display: block; /* Removes bottom margin/gap */
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="gameOverScreen" style="display:none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
+        <h1 id="gameOverMessage"></h1>
+        <button onclick="startGame()">Start Again</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

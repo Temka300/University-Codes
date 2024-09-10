@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 08:46:26 AM"/>
+        <attribute name="created" value="QXN1cztERVNLVE9QLVY1NVUwR007MjAyMi0xMC0wNDsxMDo1NToxMiBBTTsyNzIy"/>
+        <attribute name="edited" value="QXN1cztERVNLVE9QLVY1NVUwR007MjAyMi0xMC0wNDsxMToyMzo0MyBBTTsxOzI4MzA="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDg6NDY6MjYgQU07MTsyOTg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x1, x2, x3, x4, y1, y2, y3, y4" type="Integer" array="False" size=""/>
+            <output expression="&quot;x1 = &quot;" newline="True"/>
+            <input variable="x1"/>
+            <output expression="&quot;y1 = &quot;" newline="True"/>
+            <input variable="y1"/>
+            <output expression="&quot;x2 = &quot;" newline="True"/>
+            <input variable="x2"/>
+            <output expression="&quot;y2 = &quot;" newline="True"/>
+            <input variable="y2"/>
+            <output expression="&quot;x3 = &quot;" newline="True"/>
+            <input variable="x3"/>
+            <output expression="&quot;y3 = &quot;" newline="True"/>
+            <input variable="y3"/>
+            <assign variable="x4" expression="x3"/>
+            <assign variable="y4" expression="y1"/>
+            <output expression="&quot;x4=&quot;&amp;x4" newline="True"/>
+            <output expression="&quot;y4=&quot;&amp;y4" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

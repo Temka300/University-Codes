@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 09:28:11 AM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE2OzEwOjU2OjI1IFBNOzM0NzE="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE3OzAzOjUzOjQ5IFBNOzQ7MzU4OA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDk6Mjg6MTEgQU07MTsyOTgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;n deer bichih toogoo bichne uu&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="tegshnem, tegshurj, sondnem, sondurj" type="Integer" array="False" size=""/>
+            <assign variable="tegshnem" expression="0"/>
+            <assign variable="tegshurj" expression="1"/>
+            <assign variable="sondnem" expression="0"/>
+            <assign variable="sondurj" expression="1"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <if expression="i % 2 == 0">
+                    <then>
+                        <assign variable="tegshnem" expression="tegshnem + i"/>
+                        <assign variable="tegshurj" expression="tegshurj * i"/>
+                    </then>
+                    <else>
+                        <assign variable="sondnem" expression="sondnem + i"/>
+                        <assign variable="sondurj" expression="sondurj * i"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Tegsh nemelt: &quot;&amp;tegshnem" newline="True"/>
+            <output expression="&quot;Tegsh urjver: &quot;&amp;tegshurj" newline="True"/>
+            <output expression="&quot;Sondgoi nemelt: &quot;&amp;sondnem" newline="True"/>
+            <output expression="&quot;Sondgoi urjver: &quot;&amp;sondurj" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Main1
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=prompt\ min\ max
+comment2.target=double\ readNumber(java.lang.String,\ double,\ double)
+comment3.params=principal\ annualIR\ years
+comment3.target=double\ calculateMortgage(int,\ float,\ byte)
+numComments=4

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 05:23:28 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KT1ROTFFTOzIwMjItMTItMDk7MDU6MTY6MTkgUE07MjkyMA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KT1ROTFFTOzIwMjItMTItMDk7MDU6MjM6MjggUE07MTszMDI2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, M" type="Integer" array="False" size=""/>
+            <output expression="&quot;x = &quot;" newline="True"/>
+            <input variable="x"/>
+            <assign variable="M" expression="x / 100"/>
+            <output expression="&quot;M=&quot; &amp;M" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

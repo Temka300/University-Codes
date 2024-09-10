@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 09:07:58 AM"/>
+        <attribute name="created" value="QXN1cztERVNLVE9QLVY1NVUwR007MjAyMi0xMC0wMjswMjozMjoxMSBQTTsyNzMw"/>
+        <attribute name="edited" value="QXN1cztERVNLVE9QLVY1NVUwR007MjAyMi0xMC0wNDsxMTo0OTo1NiBBTTs3OzI4NDg="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE0OzAzOjU5OjIyIFBNOzE7MzU3OQ=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDk6MDc6NTggQU07MTsyOTg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nums" type="Integer" array="True" size="10"/>
+            <declare name="product, i" type="Integer" array="False" size=""/>
+            <assign variable="product" expression="1"/>
+            <output expression="&quot;10 oor too ogogdjee: &quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="nums[i]"/>
+                <assign variable="product" expression="product * nums[i]"/>
+            </for>
+            <output expression="&quot;Urjver: &quot;&amp;product" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

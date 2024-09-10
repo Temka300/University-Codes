@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-20 08:47:45 AM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTAyOzA4OjAxOjA3IEFNOzM0NDg="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTAyOzA4OjEwOjAzIEFNOzE7MzU1Mg=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDQtMjA7MDg6NDc6NDUgQU07MjsyOTg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, e" type="Integer" array="False" size=""/>
+            <declare name="G, S" type="Real" array="False" size=""/>
+            <output expression="&quot;a = &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;b = &quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;c = &quot;" newline="True"/>
+            <input variable="c"/>
+            <output expression="&quot;d = &quot;" newline="True"/>
+            <input variable="d"/>
+            <output expression="&quot;e = &quot;" newline="True"/>
+            <input variable="e"/>
+            <assign variable="s" expression="(a+b+c+d+e)/5"/>
+            <assign variable="g" expression="sqrt(a*b*c*d*e)"/>
+            <output expression="&quot;Arithmetiic Dundaj = &quot;&amp;s" newline="True"/>
+            <output expression="&quot;Geometr Dundaj = &quot;&amp;g" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

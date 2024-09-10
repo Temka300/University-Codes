@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-23 10:45:18 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6MTI6MjQgUE07Mjg4MA=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6NDU6MTggUE07MTsyOTk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1061;&#1086;&#1105;&#1088; &#1072;&#1078;&#1080;&#1083;&#1095;&#1080;&#1085; &#1072;&#1078;&#1083;&#1072;&#1072; 4 &#1094;&#1072;&#1075;&#1072;&#1072;&#1089; &#1073;&#1072;&#1075;&#1072; &#1093;&#1091;&#1075;&#1072;&#1094;&#1072;&#1072;&#1085;&#1076; &#1093;&#1080;&#1081;&#1078; &#1075;&#1199;&#1081;&#1094;&#1101;&#1090;&#1075;&#1101;&#1078;&#1101;&#1101;. &#1061;&#1101;&#1088;&#1101;&#1074; &#1101;&#1093;&#1085;&#1080;&#1081; &#1072;&#1078;&#1080;&#1083;&#1095;&#1080;&#1085; &#1075;&#1072;&#1085;&#1094;&#1072;&#1072;&#1088;&#1072;&#1072; &#1093;&#1080;&#1081;&#1089;&#1101;&#1085; &#1073;&#1086;&#1083; 2 &#1076;&#1072;&#1093;&#1100; &#1072;&#1078;&#1080;&#1083;&#1095;&#1085;&#1072;&#1072;&#1089; &#1093;&#1091;&#1088;&#1076;&#1072;&#1085; &#1093;&#1080;&#1081;&#1093; &#1073;&#1072;&#1081;&#1089;&#1072;&#1085;. &#1069;&#1093;&#1085;&#1080;&#1081; &#1072;&#1078;&#1080;&#1083;&#1095;&#1085;&#1099; &#1075;&#1072;&#1085;&#1094;&#1072;&#1072;&#1088;&#1072;&#1072; &#1072;&#1078;&#1083;&#1072;&#1072; &#1093;&#1080;&#1081;&#1078; &#1075;&#1199;&#1081;&#1094;&#1101;&#1090;&#1075;&#1101;&#1093; &#1091;&#1090;&#1075;&#1091;&#1091;&#1076;&#1099;&#1075; &#1086;&#1083;?"/>
+            <declare name="W, combinedrate, x, t" type="Real" array="False" size=""/>
+            <assign variable="W" expression="1.0"/>
+            <for variable="x" start="1.0" end="4.0" direction="inc" step="0.01">
+                <for variable="t" start="0.001" end="4.0 - x" direction="inc" step="0.01">
+                    <assign variable="combinedrate" expression="1.0 / x + 1.0 / (x + t)"/>
+                    <if expression="combinedrate &gt; 1.0 / 4.0 &amp;&amp; x &lt; t">
+                        <then>
+                            <output expression="&quot;Ehnii ajilchin gantsaaraa &quot;&amp;x&amp;&quot; tsag ajillana&quot;" newline="True"/>
+                            <output expression="&quot;Hoyrdoh ajilchin gantsaaraa &quot;&amp;t&amp;&quot; tsag ajillana&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Hariu oldoogui&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

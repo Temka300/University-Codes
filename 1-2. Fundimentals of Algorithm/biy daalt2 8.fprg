@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-17 04:16:03 PM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE3OzA0OjA3OjU2IFBNOzM0NzU="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE3OzA0OjE2OjAzIFBNOzI7MzU3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, rem, i, sum" type="Integer" array="False" size=""/>
+            <input variable="num"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="num" direction="inc" step="1">
+                <assign variable="rem" expression="num%i"/>
+                <if expression="rem==0">
+                    <then>
+                        <assign variable="sum" expression="sum+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="sum==num">
+                <then>
+                    <output expression="&quot;&#1090;&#1257;&#1075;&#1089; &#1090;&#1086;&#1086; &#1073;&#1080;&#1096;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#1090;&#1257;&#1075;&#1089; &#1090;&#1086;&#1086; &#1084;&#1257;&#1085;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

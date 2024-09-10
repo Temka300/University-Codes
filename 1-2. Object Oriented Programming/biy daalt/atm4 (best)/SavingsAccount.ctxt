@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SavingsAccount
+comment1.params=balance\ owner\ interestRate
+comment1.target=SavingsAccount(double,\ User,\ double)
+comment2.params=
+comment2.target=double\ getInterestRate()
+comment3.params=interestRate
+comment3.target=void\ setInterestRate(double)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

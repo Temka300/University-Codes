@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-07 05:36:56 PM"/>
+        <attribute name="created" value="REVMTDtHQU5BQTsyMDIzLTAyLTA3OzA1OjI2OjM5IFBNOzE5MTg="/>
+        <attribute name="edited" value="REVMTDtHQU5BQTsyMDIzLTAyLTA3OzA1OjM2OjU2IFBNOzM7MjAyOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="ax^2+-bx-+c=0"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <declare name="d, x1, x2" type="Real" array="False" size=""/>
+            <output expression="&quot;a=&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;b=&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;c=&quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="d" expression="b^2-4*a*c"/>
+            <output expression="&quot;disc=&quot;&amp;d" newline="True"/>
+            <if expression="d&gt;0">
+                <then>
+                    <assign variable="x1" expression="(-b-sqrt(d))/2*a"/>
+                    <assign variable="x2" expression="(-b+sqrt(d))/2*a"/>
+                    <output expression="&quot;x1=&quot;&amp;x1" newline="True"/>
+                    <output expression="&quot;x2=&quot;&amp;x2" newline="True"/>
+                </then>
+                <else>
+                    <if expression="d==0">
+                        <then>
+                            <assign variable="x1" expression="-b/2*a"/>
+                            <output expression="&quot;x1=x2=&quot;&amp;x1" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;&#1041;&#1086;&#1076;&#1080;&#1090; &#1090;&#1086;&#1086;&#1085; &#1096;&#1080;&#1081;&#1076;&#1075;&#1199;&#1081;&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

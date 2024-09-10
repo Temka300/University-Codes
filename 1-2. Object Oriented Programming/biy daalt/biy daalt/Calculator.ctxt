@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Calculator
+comment1.params=
+comment1.target=Calculator()
+comment2.params=mathOperations\ num1\ num2
+comment2.target=void\ organize(MathOperations,\ int,\ int)
+comment3.params=num1\ num2
+comment3.target=void\ setNumbers(int,\ int)
+comment4.params=
+comment4.target=void\ addAndPrint()
+comment5.params=
+comment5.target=void\ multiplyAndPrint()
+comment6.params=
+comment6.target=void\ subtractAndPrint()
+comment7.params=
+comment7.target=void\ divideAndPrint()
+numComments=8

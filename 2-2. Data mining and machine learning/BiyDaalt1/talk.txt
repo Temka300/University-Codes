@@ -1,0 +1,73 @@
+Ene baigaa url variable dotor baigaa link ni red wine quality csv baigaa link luu orno
+pandas library ashiglan url-ees avsan csv datag semi colontoi huvaaj head(10) haruulj
+attributes bolon object-iig haruulj baina.
+
+ehnii 10 moriig harhad quality geer ranklahad 0-10 hurtel baina.
+uldesn alcohol, sulphates, pH busad feature-uud lab-aas gargan avsan shiljilgee baina.
+ene ogogdliig df gesen variable-d oruulsan ba df.head geed ogogdliig duudaj baina.
+-
+df.shape dimension haruulj baina. object ni 1599 attribute ni 12 shirheg baina.
+-
+df.info ene bugd toog helj
+df.isnull NaN esvel hooson ogogdol baihguig helj baina.
+-
+df.describe harhad quality hamgiin ih ni 8 baga ni 3-iin hoorond baina
+dundajiig ni harhad 5.63 ba buh attribute harhad olon turliin too baigaa tul stardardization hiih ym bn
+-
+matplot, seaborn ashiglana.
+-
+df deer baigaa ogogdliin quality attribute harhad 5,6,7,4,8,3 bn
+iim attribute-tai quality-nii ogogdliig harhad 5 ym uu quality nii gold baigaag harj bn
+odoo eniig udku 0, 1 binary bolgon haruulna.
+-
+ene graph-aas distribution haruulj baina.
+-
+quality-g busad attributai hariltsaag ni harhad fixed acidity ni sain hariltsaag haruulj bn
+yr ni biy biynteigee oiroltsoo
+volatile acidity harhad va ih baihad quality ni baga 
+citric acidity positive hariltsaag haruulj bn
+orond ni chlorides davs ni negativa hariltsaag haruulj bn.
+-
+bar chartand 8 ni 1.2 esvel ondor talduu volativev acidity hamaaralgui gej haragdaj bn.
+-
+correlation matrix harhad diagonal 1 bn.
+eyreg toonuud tsagaan ongotei bn
+sorog toonuud har ongotei bn
+volatile acidity bolon quality haritsuulhad -0.39 buyu negative correlation
+orond ni quality alcohol harhad positive correlation 0.48 bn
+bugdengiig ni harhad ymar ch zero correlation alga bn.
+-
+tsd bolon fsd harhad diagonal deeshee yvj baigaa buyu positive correlation
+-
+end buh attributiin quality bolon volatile acidiy harhad median iqr Q1, Q3 aas hol baigaa
+давсан үзүүлэлт-iig hasna
+-
+quality 6.5 aas baga bol 2 oos ih bol bad gej ogno, 8 aas baga bol good gej ogno.
+-
+LabelEncoder quality deer baigaa good, bad 
+-
+y deer zoriltot baganiig hadgalna ba quality zovhon baina.
+x deer zoriltot baganiid ustgana ba quality gaas busad buh bagana orno
+-
+train_test_split ni datanii 80%-iig beltgene 20%-iig testlene
+daraa ni bugdiig ni Xtrain, test, Ytrain test orno
+-
+standard scaler oruulna
+ogogdol deer mean standard deviation olon torliin baidaltai baisan bol
+scaler-iig features luu oruulj mean 0 std 1 bolno.
+-
+Knn ni horsh ni 5 minkowski distance ashiglan euclidena distance 2 bolno
+SVM ni linear kernel tei
+GaussianNB ni GaussianNB() duudna
+Decision tree entropy criterion toi
+Random Forest entropy criterion toi 10 modtoi
+
+
+
+
+
+
+
+
+
+

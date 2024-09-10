@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-07 06:06:13 PM"/>
+        <attribute name="created" value="REVMTDtHQU5BQTsyMDIzLTAyLTA3OzA1OjQzOjU2IFBNOzE5MTY="/>
+        <attribute name="edited" value="REVMTDtHQU5BQTsyMDIzLTAyLTA3OzA2OjA2OjEzIFBNOzEyOzIwNjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="1-&#1101;&#1101;&#1089; n &#1090;&#1086;&#1086; &#1093;&#1199;&#1088;&#1090;&#1101;&#1083;&#1093; &#1073;&#1199;&#1093;&#1101;&#1083; &#1090;&#1086;&#1086;&#1085;&#1091;&#1091;&#1076;&#1099;&#1085; &#1085;&#1080;&#1081;&#1083;&#1073;&#1101;&#1088;&#1080;&#1081;&#1075; &#1086;&#1083;&#1078; &#1093;&#1101;&#1074;&#1083;&#1101;."/>
+            <declare name="i, n, s, s1" type="Integer" array="False" size=""/>
+            <output expression="&quot;n=&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="s" expression="0"/>
+            <assign variable="s1" expression="0"/>
+            <while expression="i&lt;=n">
+                <if expression="i%2==0">
+                    <then>
+                        <assign variable="s" expression="s+i"/>
+                    </then>
+                    <else>
+                        <assign variable="s1" expression="s1+i"/>
+                    </else>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="&quot;sum even=&quot;&amp;s" newline="True"/>
+            <output expression="&quot;sum &#1089;&#1086;&#1085;&#1076;&#1075;&#1086;&#1081;=&quot;&amp;s1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

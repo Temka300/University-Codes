@@ -1,0 +1,133 @@
+package lab2;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.List;
+
+public class MyChain {
+    private List<Object> elements = new ArrayList<>();
+
+    public Object[] toArray() {
+        return elements.toArray();
+    }
+
+    public void addRange(Object[] elements) {
+        this.elements.addAll(Arrays.asList(elements));
+    }
+
+    public MyChain union(MyChain chain) {
+        MyChain result = new MyChain();
+        result.addRange(this.toArray());
+
+        for (Object element : chain.toArray()) {
+            if (!result.elements.contains(element)) {
+                result.elements.add(element);
+            }
+        }
+
+        return result;
+    }
+
+    public MyChain intersection(MyChain chain) {
+        MyChain result = new MyChain();
+
+        for (Object element : this.elements) {
+            if (chain.elements.contains(element)) {
+                result.elements.add(element);
+            }
+        }
+        return result;
+    }
+
+    public void add(Object element) {
+        elements.add(element);
+    }
+
+    public static void main(String args[]) {
+        MyChain mc = new MyChain();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Choose an operation:");
+            System.out.println("1. Add element");
+            System.out.println("2. Add a range of elements");
+            System.out.println("3. Union with another MyChain");
+            System.out.println("4. Intersection with another MyChain");
+            System.out.println("5. Display elements");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline character
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter an element to add: ");
+                    int elementValue = scanner.nextInt();
+                    mc.add(elementValue);
+                    break;
+                case 2:
+                    System.out.print("Enter the number of elements in the range: ");
+                    int numElements = scanner.nextInt();
+                    Object[] elements = new Object[numElements];
+                    System.out.print("Enter the elements separated by spaces: ");
+                    for (int i = 0; i < numElements; i++) {
+                        int value = scanner.nextInt();
+                        elements[i] = value;
+                    }
+                    mc.addRange(elements);
+                    break;
+                case 3:
+                    MyChain otherChain = new MyChain();
+                    System.out.print("Enter the number of elements in the other chain: ");
+                    int numOtherElements = scanner.nextInt();
+                    Object[] otherElements = new Object[numOtherElements];
+                    System.out.print("Enter the elements for the other chain separated by spaces: ");
+                    for (int i = 0; i < numOtherElements; i++) {
+                        int value = scanner.nextInt();
+                        otherElements[i] = value;
+                    }
+                    otherChain.addRange(otherElements);
+
+                    MyChain unionResult = mc.union(otherChain);
+                    System.out.println("Union of MyChain and otherChain:");
+                    Object[] unionArray = unionResult.toArray();
+                    for (Object item : unionArray) {
+                        System.out.println("  " + (int) item);
+                    }
+                    break;
+                case 4:
+                    MyChain anotherChain = new MyChain();
+                    System.out.print("Enter the number of elements in another chain: ");
+                    int numAnotherElements = scanner.nextInt();
+                    Object[] anotherElements = new Object[numAnotherElements];
+                    System.out.print("Enter the elements for the other chain separated by spaces: ");
+                    for (int i = 0; i < numAnotherElements; i++) {
+                        int value = scanner.nextInt();
+                        anotherElements[i] = value;
+                    }
+                    anotherChain.addRange(anotherElements);
+
+                    MyChain intersectionResult = mc.intersection(anotherChain);
+                    System.out.println("Intersection of MyChain and anotherChain:");
+                    Object[] intersectionArray = intersectionResult.toArray();
+                    for (Object item : intersectionArray) {
+                        System.out.println("  " + (int) item);
+                    }
+                    break;
+                case 5:
+                    Object[] array = mc.toArray();
+                    System.out.println("Elements of MyChain:");
+                    for (Object item : array) {
+                        System.out.println("  " + (int) item);
+                    }
+                    break;
+                case 6:
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+}

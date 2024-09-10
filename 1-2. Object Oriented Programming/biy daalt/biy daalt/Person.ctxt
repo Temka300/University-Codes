@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Person
+comment1.params=name\ salary\ cost
+comment1.target=Person(java.lang.String,\ double,\ double)
+comment2.params=
+comment2.target=void\ calculateSalaryAfterTax()
+comment3.params=expense
+comment3.target=void\ addToFamilyExpenses(double)
+comment4.params=
+comment4.target=double\ getTotalFamilyIncome()
+comment5.params=
+comment5.target=double\ getTotalFamilyExpenses()
+comment6.params=
+comment6.target=void\ displayIncomeAndExpenses()
+comment7.params=members
+comment7.target=java.lang.String\ findMaxCostMember(Person[])
+numComments=8

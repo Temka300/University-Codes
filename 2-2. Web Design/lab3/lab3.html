@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Registration Form</title>
+</head>
+<body>
+
+  <form>
+    <h1 align="center">XYZ College/School</h1>
+    <h2 align="center">Student Registration Form</h2>
+
+    <table>
+      <tr>
+        <td><label for="photo">Student Image:</label></td>
+        <td><input type="file" id="photo" required accept="image/png, image/jpeg"> (less than 5mb)</td>
+      </tr>
+      <tr>
+        <td><label for="studentname">Student Name:</label></td>
+        <td><input type="text" id="studentname" size="50" required placeholder="Full Name"></td>
+      </tr>
+      <tr>
+        <td><label for="fathername">Father's Name:</label></td>
+        <td><input type="text" id="fathername" size="50" required placeholder="Father's Full Name"></td>
+      </tr>
+      <tr>
+        <td><label for="mothername">Mother's Name:</label></td>
+        <td><input type="text" id="mothername" size="50" required placeholder="Mother's Full Name"></td>
+      </tr>
+      <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td>
+          <label for="male">Male</label>
+          <input type="radio" id="male" required value="male" name="gender">
+          <label for="female">Female</label>
+          <input type="radio" id="female" required value="female" name="gender">
+        </td>
+      </tr>
+      <tr>
+        <td><label for="birthdate">Date of Birth:</label></td>
+        <td><input type="date" id="birthdate" size="50" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">E-mail:</label></td>
+        <td><input type="email" id="email" size="50" required placeholder="email@xyz.com"></td>
+      </tr>
+      <tr>
+        <td><label for="level">Level:</label></td>
+        <td>
+          <select id="level">
+            <option value="high School">High School</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="graduate">Graduate</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="department">Department:</label></td>
+        <td>
+          <select id="department">
+            <option value="Computer Science">Computer Science</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="mobile">Tel/Mobile:</label></td>
+        <td><input type="tel" id="mobile" size="50" maxlength="8" required placeholder="XXXXXXXX" pattern="[0-9]{8}"></td>
+      </tr>
+    </table>
+
+    <h2 align="center">Permanent Address</h2>
+
+    <table>
+      <tr>
+        <td><label for="permstate">State:</label></td>
+        <td><input type="text" id="permstate" size="50" required placeholder="State"></td>
+      </tr>
+      <tr>
+        <td><label for="permcity">City:</label></td>
+        <td><input type="text" id="permcity" size="50" required placeholder="City"></td>
+      </tr>
+      <tr>
+        <td><label for="permzipcode">Zip Code:</label></td>
+        <td><input type="number" id="permzipcode" size="5" required placeholder="Zip Code"></td>
+      </tr>
+      <tr>
+        <td><label for="permnumber">Tel/Mobile:</label></td>
+        <td><input type="tel" id="permnumber" size="50" minlength="7" maxlength="8" required placeholder="XXXXXXXX" pattern="[0-9]{8}" size="25"></td>
+      </tr>
+    </table>
+
+    <h2 align="center">Temporary Address</h2>
+  
+        <label for="sameas">Same as Permanent Address</label></td>
+        <input type="checkbox" id="sameas" name="sameas"
+            onchange="document.getElementById('tempstate').disabled=this.checked;
+                    document.getElementById('tempcity').disabled=this.checked;
+                    document.getElementById('tempzipcode').disabled=this.checked;
+                    document.getElementById('tempnumber').disabled=this.checked">
+    <table>
+      <tr>
+        <td><label for="tempstate">State:</label></td>
+        <td><input type="text" id="tempstate" size="50" maxlength="25" required placeholder="State"></td>
+      </tr>
+      <tr>
+        <td><label for="tempcity">City:</label></td>
+        <td><input type="text" id="tempcity" size="50" maxlength="25" required placeholder="City"></td>
+      </tr>
+      <tr>
+        <td><label for="tempzipcode">Zip Code:</label></td>
+        <td><input type="number" id="tempzipcode" size="50" maxlength="5" required placeholder="Zip Code"></td>
+      </tr>
+      <tr>
+        <td><label for="tempnumber">Tel/Mobile:</label></td>
+        <td><input type="tel" id="tempnumber" size="50" maxlength="8" required placeholder="XXXXXXXX" pattern="[0-9]{8}"></td>
+      </tr>
+    </table>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form><hr>
+
+  <p>2.</p>
+  <table width="1" border="1" cellpadding="15" cellspacing="5">
+    <tr><td colspan="2" align="center">15% ( hdrmfrm )</td></tr>
+    <tr><td align="center">20 % (packagefrm)</td> <td rowspan="2" align="center">dtlfrm</td></tr>
+    <tr><td align="center">(listfrm)</td></tr>
+  </table>
+</body>
+</html>

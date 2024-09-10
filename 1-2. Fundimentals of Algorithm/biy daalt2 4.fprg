@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bayar Jargal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-17 04:37:07 PM"/>
+        <attribute name="created" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE3OzA0OjI1OjQ1IFBNOzM0NzM="/>
+        <attribute name="edited" value="QmF5YXIgSmFyZ2FsO0RFU0tUT1AtT1JFNjVJTjsyMDIzLTAzLTE3OzA0OjM3OjA3IFBNOzE7MzU4Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, a1" type="Integer" array="False" size=""/>
+            <declare name="control" type="String" array="False" size=""/>
+            <assign variable="control" expression="&quot;&quot;"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="a1" expression="0"/>
+            <output expression="&quot;Start = S, Quit = Q&quot;" newline="True"/>
+            <while expression="True">
+                <input variable="control"/>
+                <if expression="control==&quot;s&quot;">
+                    <then>
+                        <output expression="&quot;Enter numbers&quot;" newline="True"/>
+                        <input variable="a"/>
+                        <input variable="a1"/>
+                        <output expression="&quot;&#1053;&#1080;&#1081;&#1083;&#1073;&#1101;&#1088;= &quot;&amp;(a+a1)" newline="True"/>
+                        <output expression="&quot;&#1103;&#1083;&#1075;&#1072;&#1074;&#1072;&#1088;= &quot;&amp;(a-a1)" newline="True"/>
+                        <output expression="&quot;&#1198;&#1088;&#1078;&#1074;&#1101;&#1088;= &quot;&amp;(a*a1)" newline="True"/>
+                        <output expression="&quot;&#1053;&#1086;&#1075;&#1076;&#1074;&#1086;&#1088;= &quot;&amp;(a/a1)" newline="True"/>
+                        <output expression="&quot;&#1047;&#1101;&#1088;&#1101;&#1075;= &quot;&amp;(a^a1)" newline="True"/>
+                        <output expression="&quot;Start = S, Quit = Q&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="control==&quot;q&quot;">
+                            <then>
+                                <output expression="&quot;Quit&quot;" newline="True"/>
+                                <breakpoint expression="" always="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Error!, again&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

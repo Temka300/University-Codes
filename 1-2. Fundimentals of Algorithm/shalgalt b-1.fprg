@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Temka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-23 10:09:01 PM"/>
+        <attribute name="created" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MDk6NTY6NDUgUE07Mjg5OQ=="/>
+        <attribute name="edited" value="VGVta2E7REVTS1RPUC1KTUtFR1JQOzIwMjMtMDUtMjM7MTA6MDk6MDEgUE07MjsyOTkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1043;&#1101;&#1088;&#1083;&#1080;&#1081;&#1085; &#1093;&#1091;&#1088;&#1076; 3&#8901;10^8 &#1084;/c &#1073;&#1072;&#1081;&#1076;&#1072;&#1075;. &#1053;&#1072;&#1088;&#1085;&#1072;&#1072;&#1089; 153&#1089;&#1072;&#1103; &#1082;&#1084; &#1079;&#1072;&#1081;&#1076; &#1073;&#1072;&#1081;&#1088;&#1083;&#1072;&#1078; &#1073;&#1072;&#1081;&#1075;&#1072;&#1072; &#1093;&#1080;&#1081;&#1084;&#1101;&#1083; &#1076;&#1072;&#1075;&#1091;&#1091;&#1083;&#1076; &#1085;&#1072;&#1088;&#1085;&#1099; &#1075;&#1101;&#1088;&#1101;&#1083; &#1093;&#1199;&#1088;&#1101;&#1093;&#1101;&#1076; &#1103;&#1084;&#1072;&#1088; &#1093;&#1091;&#1075;&#1072;&#1094;&#1072;&#1072; &#1079;&#1072;&#1088;&#1094;&#1091;&#1091;&#1083;&#1072;&#1075;&#1076;&#1072;&#1093; &#1074;&#1101;?"/>
+            <declare name="time, distancem, distancekm, speed, min, sec" type="Integer" array="False" size=""/>
+            <assign variable="speed" expression="300000000"/>
+            <assign variable="distancekm" expression="153000000"/>
+            <assign variable="distancem" expression="distancekm * 1000"/>
+            <assign variable="time" expression="distancem / speed"/>
+            <output expression="time" newline="True"/>
+            <assign variable="min" expression="time / 60"/>
+            <assign variable="sec" expression="510 % 60"/>
+            <output expression="min&amp;&quot; min &quot;&amp;sec&amp;&quot; sec&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Website Layout</title>
+     <style>
+         body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         }
+
+         header {
+         background-color: #f2f2f2;
+         padding: 10px;
+         text-align: center;
+         }
+
+         nav {
+         background-color: #333;
+         color: #fff;
+         }
+
+         nav ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         display: flex;
+         justify-content: center;
+         }
+
+         nav li {
+         margin: 0 10px;
+         }
+
+         nav a {
+         color: #fff;
+         text-decoration: none;
+         padding: 10px;
+         }
+
+         main {
+         display: flex;
+         justify-content: space-between;
+         padding: 20px;
+         }
+
+         .left-section {
+         flex-basis: 60%;
+         }
+
+         .right-section {
+         flex-basis: 35%;
+         }
+
+         .item {
+         margin-bottom: 20px;
+         }
+
+         footer {
+         background-color: #f2f2f2;
+         padding: 10px;
+         text-align: center;
+         }
+
+         .clearfix::after {
+         content: "";
+         clear: both;
+         display: table;
+         }
+     </style>
+</head>
+<body>
+   <header>
+     <div class="logo">LOGO</div>
+   </header>
+
+   <nav>
+     <ul>
+       <li><a href="#">Home Page</a></li>
+       <li><a href="#">Introduction</a></li>
+       <li><a href="#">Creation</a></li>
+       <li><a href="#">Contact</a></li>
+     </ul>
+   </nav>
+
+   <main>
+     <section class="left-section">
+        <div>
+            <img src="download.png" alt="Image" style="float:left; margin-right:10px; width:250px; height:250px;">
+            <h2>Sample news title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercise ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div>
+            <img src="download.png" alt="Image" style="float:left; margin-right:10px; width:250px; height:250px;">
+            <h2>Sample news title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercise ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div>
+            <img src="download.png" alt="Image" style="float:left; margin-right:10px; width:250px; height:250px;">
+            <h2>Sample news title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercise ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div> 
+    </section>
+
+     <section class="right-section">
+         <h2>Newly added</h2>
+         <div class="item clearfix">
+           <img src="download.png" alt="Image" style="float:left; margin-right:10px; width:100px; height:100px;">
+           <p>Sample news title</p>
+         </div>
+         <div class="item clearfix">
+           <img src="download.png" alt="Image" style="float:left; margin-right:10px; width:100px; height:100px;">
+           <p>Sample news title</p>
+         </div>
+         <div class="item clearfix">
+           <img src="download.png" alt="Image" style="float:left; margin-right:10px; width:100px; height:100px;">
+           <p>Sample news title</p>
+         </div>
+       </section>
+   </main>
+
+   <footer>
+     <p>2023 for Open Source Developers</p>
+   </footer>
+</body>
+</html>

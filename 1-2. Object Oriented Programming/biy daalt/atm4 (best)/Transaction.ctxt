@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Transaction
+comment1.params=accountID\ tType\ tAmount
+comment1.target=Transaction(java.lang.String,\ java.lang.String,\ double)
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment11.params=args
+comment11.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=java.lang.String\ getAccountID()
+comment3.params=accountID
+comment3.target=void\ setAccountID(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ gettID()
+comment5.params=tID
+comment5.target=void\ settID(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ gettType()
+comment7.params=tType
+comment7.target=void\ settType(java.lang.String)
+comment8.params=
+comment8.target=double\ gettAmount()
+comment9.params=tAmount
+comment9.target=void\ settAmount(double)
+numComments=12

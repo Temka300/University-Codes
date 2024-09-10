@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>lab4.</title>
+    </head>
+    <body>
+        <header>
+            <audio controls muted loop>
+                <source src="videos/Nogoon_tsneher.m4a">
+            </audio>
+        </header>
+
+        <section>
+            <video width="500" height="240" controls>
+                <source src="videos/video.webm">
+            </video>
+            
+            <canvas id="myCanvas" style="border:1px solid black"></canvas>
+            <script>
+                const canvas = document.getElementById('myCanvas');
+                const ctx = canvas.getContext('2d');
+
+                // Set canvas size
+                canvas.width = 400;
+                canvas.height = 300;
+
+                // Draw sky
+                ctx.fillStyle = 'skyblue';
+                ctx.fillRect(0, 0, canvas.width, canvas.height / 2);
+
+                // Draw grass
+                ctx.fillStyle = 'green';
+                ctx.fillRect(0, canvas.height / 2, canvas.width, canvas.height / 2);
+
+                // Draw mountain
+                ctx.fillStyle = 'gray';
+                ctx.beginPath();
+                ctx.moveTo(50, canvas.height / 2);
+                ctx.lineTo(150, 100);
+                ctx.lineTo(250, canvas.height / 2);
+                ctx.fill();
+
+                // Draw sun
+                ctx.fillStyle = 'yellow';
+                ctx.beginPath();
+                ctx.arc(350, 50, 30, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Draw person
+                ctx.fillStyle = 'brown';
+                ctx.beginPath();
+                ctx.arc(100, 220, 10, 0, Math.PI * 2); // head
+                ctx.fillRect(95, 230, 10, 30); // body
+                ctx.fillRect(100, 260, 3, 20); // right leg
+                ctx.fillRect(95, 260, 3, 20); // left leg
+                ctx.fillRect(90, 230, 20, 3); // arms
+                ctx.fill();
+            </script>
+        </section>
+
+        <footer>
+            <svg width="800" height="600">
+                <!-- Sky -->
+                <rect x="0" y="0" width="800" height="300" fill="skyblue"></rect>
+                
+                <!-- Sun -->
+                <circle cx="700" cy="100" r="50" fill="yellow"></circle>
+                
+
+                <!-- Sun -->
+                <circle cx="700" cy="100" r="50" fill="yellow"></circle>
+
+                <!-- Cloud -->
+                <circle cx="180" cy="150" r="20" fill="white"></circle>
+                <circle cx="200" cy="140" r="20" fill="white"></circle>
+                <circle cx="220" cy="150" r="20" fill="white"></circle>
+
+                <circle cx="330" cy="100" r="20" fill="white"></circle>
+                <circle cx="350" cy="90" r="20" fill="white"></circle>
+                <circle cx="370" cy="100" r="20" fill="white"></circle>
+
+                <!-- Mountain Range -->
+                <polygon points="300,300 500,300 400,100" fill="saddlebrown"></polygon> <!-- First Mountain -->
+                <polygon points="380,300 580,300 480,160" fill="saddlebrown"></polygon> <!-- Second Mountain -->
+                <polygon points="450,300 650,300 550,100" fill="saddlebrown"></polygon> <!-- Third Mountain -->
+                <polygon points="530,300 730,300 630,160" fill="saddlebrown"></polygon> <!-- Fourth Mountain -->
+                <polygon points="600,300 800,300 700,100" fill="saddlebrown"></polygon> <!-- Fifth Mountain -->
+                
+                <!-- Cloud -->
+                <circle cx="530" cy="100" r="35" fill="white"></circle>
+                <circle cx="570" cy="90" r="35" fill="white"></circle>
+                <circle cx="610" cy="100" r="35" fill="white"></circle>
+                
+                <!-- Grass -->
+                <rect x="0" y="300" width="800" height="300" fill="green"></rect>
+                
+                <!-- House structure -->
+                <rect x="150" y="280" width="200" height="200" fill="gray"></rect> <!-- Main house body -->
+                <polygon points="150,280 250,180 350,280" fill="red"></polygon> <!-- Roof -->
+
+                <!-- Windows -->
+                <rect x="170" y="300" width="30" height="30" fill="white"></rect>  <!-- Window 1 -->
+                <rect x="240" y="300" width="30" height="30" fill="white"></rect>  <!-- Window 2 -->
+                <rect x="170" y="350" width="30" height="30" fill="white"></rect>  <!-- Window 3 -->
+                <rect x="240" y="350" width="30" height="30" fill="white"></rect>  <!-- Window 4 -->
+                <rect x="170" y="400" width="30" height="30" fill="white"></rect>  <!-- Window 5 -->
+                <rect x="240" y="400" width="30" height="30" fill="white"></rect>  <!-- Window 6 -->
+                <!-- <rect x="170" y="350" width="30" height="30" fill="white"></rect>
+                <rect x="240" y="350" width="30" height="30" fill="white"></rect> -->
+
+                <!-- Door -->
+                <rect x="290" y="400" width="40" height="80" fill="brown"></rect> <!-- Door, adjusted for a realistic position -->
+
+                <!-- Sun -->
+                <circle cx="320" cy="450" r="5" fill="yellow"></circle>
+            </svg>
+        </footer>
+    </body>
+</html>
