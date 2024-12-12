@@ -8,21 +8,17 @@ def min_search_cost(k, f):
     n = len(k)
     min_cost = float('inf')
     
-    # Try each key as root
     for root in k:
         cost = 0
-        # Calculate cost for this root
         for i in range(n):
-            # Level is absolute difference between root and current key
             level = abs(k[i] - root)
-            cost += f[i] * (level + 1)  # +1 because root level starts at 1
+            cost += f[i] * (level + 1)
         min_cost = min(min_cost, cost)
     
     return min_cost
 
-# Test case
 if __name__ == "__main__":
     k = [5, 6]
     f = [17, 25]
     result = min_search_cost(k, f)
-    print(f"Minimum search cost: {result}")  # Should output 59
+    print(f"Minimum search cost: {result}")

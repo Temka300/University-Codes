@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/tree-huffman-decoding/problem
+
 class Node:
     def __init__(self, char=None, freq=None):
         self.char = char  # Character for this node

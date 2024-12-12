@@ -1,30 +1,24 @@
 def coin_change(coins, amount):
-    # Memoization dictionary
     memo = {}
     
     def dp(remaining):
-        # Base cases
         if remaining == 0:
-            return 0  # No coins needed for amount 0
+            return 0
         if remaining < 0:
-            return float('inf')  # Invalid case, return infinity
+            return float('inf')
         
-        # Check if result is already computed
         if remaining in memo:
             return memo[remaining]
         
-        # Recurrence relation: minimum coins for the current amount
         result = float('inf')
         for coin in coins:
             result = min(result, 1 + dp(remaining - coin))
         
-        # Save the result in the memo dictionary
         memo[remaining] = result
         return result
     
-    # Calculate result
     result = dp(amount)
-    return result if result != float('inf') else -1  # Return -1 if no solution exists
+    return result if result != float('inf') else -1
 
 # Unit Test
 import unittest
