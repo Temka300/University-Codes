@@ -1,0 +1,129 @@
+Which is a rough approximation method?
+Question 1 Select one:
+a.Add one
+b.Knesser-Nein extended interpolation
+c.Linear interpolation *
+
+
+
+The Knesser-Ney equation and the Good-Turing equation are not related.
+Question 2 Select one:
+a.No *
+b.Yes
+
+
+
+Which of the following is not relevant to correcting misspelled words?
+Question 3 Select one:
+a.Highest noise channel probability *
+b.Shortest, smallest, weighted correction size
+c.Large dictionary is good
+d.Generate word suggestions: real words similar to the misspelled word
+
+
+
+Which of the following is not relevant to identifying misspelled words?
+Question 4 Select one:
+a.A large dictionary is good
+b.The shortest, least, and most weighted correction amount *
+c.Any word not in the dictionary is a misspelled word
+
+
+
+Which of the following is not included in the creation of a set of suggested words?
+Question 5 Select one:
+a. the word itself *
+b. all English words that differ by one letter
+c. words that are close matches
+d. words that have the same pronunciation
+
+
+
+If there is no report in the correction
+Question 6 Select one:
+a.automatic correction
+b.give the best matching correction
+c.give an error flag *
+d.give a list of corrections
+
+
+
+Naive Bayes classifiers assume that position is relevant.
+Question 7 Answer
+a.Yes
+b.No * 
+
+
+
+Which of the following is the formula used in Naive Bayes classifiers?
+Question 8 Answer
+a.P(d c)P(d) = P(c d)
+b.P(c|d)P(d) = P(d|c)P(c) *
+c.P(d c)P(d) = P(c d)P(c)
+d.P(c d)P(d) = P(d c)P(c)
+e.P(d|c)P(d) = P(c|d)P(c)
+
+
+
+Which is the policy of attitude analysis?
+Question 9 Answer
+a.Is the author male or female?
+b.Is this spam?
+c.Who wrote the Declaration of Independence?
+d.Is the movie review positive or negative? *
+e.What is the topic of this article?
+
+
+
+Which one is not recommended for large data sets?
+Question 10 Answer
+a.Use SVM.
+b.Use decision trees.
+c.Use kNN. *
+d.Use regularized logistic regression.
+
+
+Which is not recommended for very small data sets?
+Question 11 Answer
+a.Try semi-supervised learning methods. *
+b.Use user-entered decision trees.
+c.Find more labeled data.
+d.Use Naive Bayes.
+
+
+
+What is the definition of recall?
+Question 12 Answer
+a. The proportion of Selected items corrected
+
+b. The proportion of correct items selected *
+
+
+
+Which is not an attitude?
+Question 13 Answer
+a.Opinion
+b.Attitudes
+c.Emotions
+d.Concepts *
+e.object attitude
+
+
+
+Which of the following is not a problem for tokenization in attitude analysis?
+Question 14 Answer
+a.Emotion *
+b.Twitter hashtag
+c.Date
+d.Phone number
+e.comma
+
+
+
+Which is not a problem for tokenization in attitude analysis?
+Question 15 Answer
+a.XML tag
+b.Facebook name
+c.Uppercase
+d.HTML tag
+e.Lowercase *
